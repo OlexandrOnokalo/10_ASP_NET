@@ -3,8 +3,8 @@
     public class CategoryModel
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public required string Name { get; set; }
 
-        public ICollection<ProductModel> Products { get; set; }
+        public ICollection<ProductModel> Products { get; set; } = [];
     }
 }
