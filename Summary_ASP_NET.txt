@@ -7534,7 +7534,30 @@ Repositories\ProductRepository.cs
 
 \\репозиторії це класи для роботи з dbContext. Щоб не напряму контроллер працював з базою а через цей класс
 
-public class ProductRepository???????
+Repositories/ProductRepostitory.cs
+
+
+using Microsoft.EntityFrameworkCore;
+using PD411_Shop.Data;
+using PD411_Shop.Models;
+
+namespace PD411_Shop.Repositories
+{
+    public class ProductRepostitory
+    {
+        private readonly AppDbContext _context;
+
+        public ProductRepostitory(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<IQueryable<ProductModel>> GetProductsAsync()
+        {
+            return _context.Products.AsNoTracking();
+        }
+    }
+}
 
 
 
@@ -7555,52 +7578,152 @@ builder.Services.AddScoped<ProductRepository>(); //обєкт класу буд�
 
 і прописавши так класи, шарпи автоматично будуть в конструкторах створювати обєкти і передавати в конструктор автоматично. Не треба буде вручну передавати в конструктор обєкти класів
 
-public HomeController(Ilogge?????????
+
+
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
+        {
+            _logger = logger;
+            _context = context;
+        }
 
 \\тут параметри що передаються генеруються самі шарпи
 
 
 HomeController - це класс що перенаправляє користувача на ту чи іншу сторінку, в залежності від маршрутів
 
+Controllers/HomeController.cs
 
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PD411_Shop.Data;
+using PD411_Shop.Models;
+using PD411_Shop.Repositories;
+using System.Diagnostics;
+
+namespace PD411_Shop.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context;
+
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
+        {
+            _logger = logger;
+            _context = context;
+        }
+
+        public IActionResult Index()
+        {
+            IEnumerable<ProductModel> products = _context.Products.AsEnumerable();
+
+            return View(products);
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult AboutUs()
+        {
+            return View(); 
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}
 
 Сідер по новому Extension метод. Дозволяє в клас додавати методи, не змінюючі сам класам
 
-Seeder.cs
+Data/Initalizer/Seeder.cs
 
-public static class Seeder
-??????????????????
+using Microsoft.EntityFrameworkCore;
+using PD411_Shop.Models;
+using System.Text.Json;
 
-		using var scope = app.???
-		using var contex????
-		
-		\\ таким чином отримуємо AppDbContext
-		
-		contex.Database.Migration(); \\ те саме що в консолі update-database, застоовує всі міграції якщо є не накатані
-		
-		????????? далі сеед 
-		
-	if (!??????   \\перевірка чи є хоч одна категорія
-	
-	
+namespace PD411_Shop.Data.Initalizer
+{
+    public static class Seeder
+    {
+        public static void Seed(IApplicationBuilder app)
+        {
+            // отримання AppDbContext із DI
+            using var scope = app.ApplicationServices.CreateScope();
+            using var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+			\\ таким чином отримуємо AppDbContext
+
+            context.Database.Migrate(); // застосовує всі міграції як і команда "update-database"
+
+            if (!context.Categories.Any())
+            {
+                string root = Directory.GetCurrentDirectory();
+                string path = Path.Combine(root, "wwwroot", "seed_data", "components.json");
+                string json = File.ReadAllText(path);
+                List<CategoryModel>? categories = JsonSerializer.Deserialize<List<CategoryModel>>(json);
+
+                if(categories == null)
+                {
+                    return;
+                }
+
+                context.Categories.AddRange(categories);
+                context.SaveChanges();
+            }
+        }
+    }
+}
+
+
 	
 Виводимо товари на вьюшку
 
+/Controllers/HomeController.cs
 
-public IAction????
-		IEnumerable<ProductModel> products = _contex.Products.AsEnumerable();  \\товари просто виводиться, правки не внесеш
-		
-		return View(products);
-}
+        public IActionResult Index()
+        {
+            IEnumerable<ProductModel> products = _context.Products.AsEnumerable();
+
+            return View(products);
+        }
 		
 \\таким чином ці товари попадають на вьюшку
 
 і тепер у вьшці
 
-index.cshtml
+Views/Home/Index.cshtml
 
-@model IEnurable<ProductModel>  \\ вказуємо тип що ми передаємо як модел
+@model IEnumerable<ProductModel> \\ вказуємо тип що ми передаємо як модел
+@{
+    ViewData["Title"] = "Home Page";
+}
 
-div class??????
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 
-	@foreach( var?????  \\через @ ми можемо додавати код в html
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var product in Model) \\через @ ми можемо додавати код в html
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

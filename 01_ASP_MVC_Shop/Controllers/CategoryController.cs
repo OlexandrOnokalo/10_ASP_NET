@@ -4,20 +4,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PD411_Shop.Controllers
 {
-    public class ProductController : Controller
+    public class CategoryController : Controller
     {
         private readonly AppDbContext _context;
 
-        public ProductController(AppDbContext context)
+        public CategoryController(AppDbContext context)
         {
             _context = context;
         }
 
         public IActionResult Index()
         {
-            var products = _context.Products.AsEnumerable();
+            var Categories = _context.Categories.AsEnumerable();
 
-            return View(products);
+            return View(Categories);
         }
     }
 }
