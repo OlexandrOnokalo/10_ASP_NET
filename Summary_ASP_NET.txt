@@ -7727,3 +7727,31 @@ Views/Home/Index.cshtml
         </tbody>
     </table>
 </div>
+
+
+
+========================================================
+03_ASP_MVC_POST_FORM
+
+Program.cs
+
+string? connectingString = ???????
+
+
+переносимо конекш стрінгу в 
+appsettings.json
+
+"Connection strings??????????????
+
+
+shared\Layout.cshtml
+
+
+підключаємо 
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+для додавання товару в контролеррі додаємо новий екшен 
+create???????
+
+роюим нову вьюшку
+в формі додаємо metod???????????

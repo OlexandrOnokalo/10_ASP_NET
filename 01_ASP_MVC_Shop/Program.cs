@@ -9,7 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer("Server=PULSE\\SQLEXPRESS;Database=ASP_MVC_SHOP;Trusted_Connection=True;TrustServerCertificate=True;"));
+    options.UseSqlServer("Server=(localdb)\\MSSqlLocalDb;Database=ASP_MVC_SHOP;Trusted_Connection=True;TrustServerCertificate=True;")); 
+
+//"Server=PULSE\\SQLEXPRESS;Database=ASP_MVC_SHOP;Trusted_Connection=True;TrustServerCertificate=True;"
 
 var app = builder.Build();
 
