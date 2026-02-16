@@ -8,10 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer("Server=(localdb)\\MSSqlLocalDb;Database=ASP_MVC_SHOP;Trusted_Connection=True;TrustServerCertificate=True;")); 
-
-//"Server=PULSE\\SQLEXPRESS;Database=ASP_MVC_SHOP;Trusted_Connection=True;TrustServerCertificate=True;"
+{
+    string? connectionString = builder.Configuration.GetConnectionString("LocalDb");
+    options.UseSqlServer(connectionString);
+});
 
 var app = builder.Build();
 

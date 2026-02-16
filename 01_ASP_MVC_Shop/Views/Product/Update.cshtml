@@ -1,0 +1,40 @@
+﻿@model _01_ASP_MVC_Shop.ViewModels.ProductEditVM
+
+<h2>Update Product</h2>
+
+<form asp-action="Update" method="post" enctype="multipart/form-data">
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="CurrentImage" />
+
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label>Brand</label>
+        <input asp-for="Brand" />
+    </div>
+
+    <div>
+        <label>Price</label>
+        <input asp-for="Price" />
+    </div>
+
+    <div>
+        <label>Current Image</label><br />
+        @if (Model.CurrentImage != null)
+        {
+            <img src="~/images/@Model.CurrentImage" width="150" />
+        }
+    </div>
+
+    <div>
+        <label>New Image</label>
+        <input asp-for="Image" type="file" />
+    </div>
+
+    <button type="submit">Save</button>
+
+</form>

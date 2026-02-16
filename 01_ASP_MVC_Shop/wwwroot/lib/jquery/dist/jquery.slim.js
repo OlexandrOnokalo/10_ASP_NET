@@ -575,11 +575,11 @@ var sort = arr.sort;
 var splice = arr.splice;
 
 
-var whitespace = "[\\x20\\t\\r\\n\\f]";
+var whitespace = "[//x20//t//r//n//f]";
 
 
 var rtrimCSS = new RegExp(
-	"^" + whitespace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + whitespace + "+$",
+	"^" + whitespace + "+|((?:^|[^////])(?:////.)*)" + whitespace + "+$",
 	"g"
 );
 
@@ -616,11 +616,11 @@ function fcssescape( ch, asCodePoint ) {
 		}
 
 		// Control characters and (dependent upon position) numbers get escaped as code points
-		return ch.slice( 0, -1 ) + "\\" + ch.charCodeAt( ch.length - 1 ).toString( 16 ) + " ";
+		return ch.slice( 0, -1 ) + "//" + ch.charCodeAt( ch.length - 1 ).toString( 16 ) + " ";
 	}
 
 	// Other potentially-special ASCII characters get backslash-escaped
-	return "\\" + ch;
+	return "//" + ch;
 }
 
 jQuery.escapeSelector = function( sel ) {
@@ -670,31 +670,31 @@ var i,
 	// Regular expressions
 
 	// https://www.w3.org/TR/css-syntax-3/#ident-token-diagram
-	identifier = "(?:\\\\[\\da-fA-F]{1,6}" + whitespace +
-		"?|\\\\[^\\r\\n\\f]|[\\w-]|[^\0-\\x7f])+",
+	identifier = "(?:////[//da-fA-F]{1,6}" + whitespace +
+		"?|////[^//r//n//f]|[//w-]|[^\0-//x7f])+",
 
 	// Attribute selectors: https://www.w3.org/TR/selectors/#attribute-selectors
-	attributes = "\\[" + whitespace + "*(" + identifier + ")(?:" + whitespace +
+	attributes = "//[" + whitespace + "*(" + identifier + ")(?:" + whitespace +
 
 		// Operator (capture 2)
 		"*([*^$|!~]?=)" + whitespace +
 
 		// "Attribute values must be CSS identifiers [capture 5] or strings [capture 3 or capture 4]"
-		"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + identifier + "))|)" +
-		whitespace + "*\\]",
+		"*(?:'((?:////.|[^////'])*)'|\"((?:////.|[^////\"])*)\"|(" + identifier + "))|)" +
+		whitespace + "*//]",
 
-	pseudos = ":(" + identifier + ")(?:\\((" +
+	pseudos = ":(" + identifier + ")(?://((" +
 
 		// To reduce the number of selectors needing tokenize in the preFilter, prefer arguments:
 		// 1. quoted (capture 3; capture 4 or capture 5)
-		"('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|" +
+		"('((?:////.|[^////'])*)'|\"((?:////.|[^////\"])*)\")|" +
 
 		// 2. simple (capture 6)
-		"((?:\\\\.|[^\\\\()[\\]]|" + attributes + ")*)|" +
+		"((?:////.|[^////()[//]]|" + attributes + ")*)|" +
 
 		// 3. anything else (capture 2)
 		".*" +
-		")\\)|)",
+		")//)|)",
 
 	// Leading and non-escaped trailing whitespace, capturing some non-whitespace characters preceding the latter
 	rwhitespace = new RegExp( whitespace + "+", "g" ),
@@ -709,21 +709,21 @@ var i,
 
 	matchExpr = {
 		ID: new RegExp( "^#(" + identifier + ")" ),
-		CLASS: new RegExp( "^\\.(" + identifier + ")" ),
+		CLASS: new RegExp( "^//.(" + identifier + ")" ),
 		TAG: new RegExp( "^(" + identifier + "|[*])" ),
 		ATTR: new RegExp( "^" + attributes ),
 		PSEUDO: new RegExp( "^" + pseudos ),
 		CHILD: new RegExp(
-			"^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\(" +
-				whitespace + "*(even|odd|(([+-]|)(\\d*)n|)" + whitespace + "*(?:([+-]|)" +
-				whitespace + "*(\\d+)|))" + whitespace + "*\\)|)", "i" ),
+			"^:(only|first|last|nth|nth-last)-(child|of-type)(?://(" +
+				whitespace + "*(even|odd|(([+-]|)(//d*)n|)" + whitespace + "*(?:([+-]|)" +
+				whitespace + "*(//d+)|))" + whitespace + "*//)|)", "i" ),
 		bool: new RegExp( "^(?:" + booleans + ")$", "i" ),
 
 		// For use in libraries implementing .is()
 		// We use this for POS matching in `select`
 		needsContext: new RegExp( "^" + whitespace +
-			"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" + whitespace +
-			"*((?:-\\d)?\\d*)" + whitespace + "*\\)|)(?=[^-]|$)", "i" )
+			"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?://(" + whitespace +
+			"*((?:-//d)?//d*)" + whitespace + "*//)|)(?=[^-]|$)", "i" )
 	},
 
 	rinputs = /^(?:input|select|textarea|button)$/i,
@@ -736,8 +736,8 @@ var i,
 
 	// CSS escapes
 	// https://www.w3.org/TR/CSS21/syndata.html#escaped-characters
-	runescape = new RegExp( "\\\\[\\da-fA-F]{1,6}" + whitespace +
-		"?|\\\\([^\\r\\n\\f])", "g" ),
+	runescape = new RegExp( "////[//da-fA-F]{1,6}" + whitespace +
+		"?|////([^//r//n//f])", "g" ),
 	funescape = function( escape, nonHex ) {
 		var high = "0x" + escape.slice( 1 ) - 0x10000;
 
@@ -1277,13 +1277,13 @@ function setDocument( node ) {
 
 		documentElement.appendChild( el ).innerHTML =
 			"<a id='" + expando + "' href='' disabled='disabled'></a>" +
-			"<select id='" + expando + "-\r\\' disabled='disabled'>" +
+			"<select id='" + expando + "-\r//' disabled='disabled'>" +
 			"<option selected=''></option></select>";
 
 		// Support: iOS <=7 - 8 only
 		// Boolean attributes and "value" are not treated correctly in some XML documents
 		if ( !el.querySelectorAll( "[selected]" ).length ) {
-			rbuggyQSA.push( "\\[" + whitespace + "*(?:value|" + booleans + ")" );
+			rbuggyQSA.push( "//[" + whitespace + "*(?:value|" + booleans + ")" );
 		}
 
 		// Support: iOS <=7 - 8 only
@@ -1332,7 +1332,7 @@ function setDocument( node ) {
 		input.setAttribute( "name", "" );
 		el.appendChild( input );
 		if ( !el.querySelectorAll( "[name='']" ).length ) {
-			rbuggyQSA.push( "\\[" + whitespace + "*name" + whitespace + "*=" +
+			rbuggyQSA.push( "//[" + whitespace + "*name" + whitespace + "*=" +
 				whitespace + "*(?:''|\"\")" );
 		}
 	} );
@@ -5052,7 +5052,7 @@ jQuery.event = {
 			type = ( selector ? special.delegateType : special.bindType ) || type;
 			handlers = events[ type ] || [];
 			tmp = tmp[ 2 ] &&
-				new RegExp( "(^|\\.)" + namespaces.join( "\\.(?:.*\\.|)" ) + "(\\.|$)" );
+				new RegExp( "(^|//.)" + namespaces.join( "//.(?:.*//.|)" ) + "(//.|$)" );
 
 			// Remove matching events
 			origCount = j = handlers.length;
@@ -7775,7 +7775,7 @@ jQuery.extend( jQuery.event, {
 		event.isTrigger = onlyHandlers ? 2 : 3;
 		event.namespace = namespaces.join( "." );
 		event.rnamespace = event.namespace ?
-			new RegExp( "(^|\\.)" + namespaces.join( "\\.(?:.*\\.|)" ) + "(\\.|$)" ) :
+			new RegExp( "(^|//.)" + namespaces.join( "//.(?:.*//.|)" ) + "(//.|$)" ) :
 			null;
 
 		// Clean up the event in case it is being reused

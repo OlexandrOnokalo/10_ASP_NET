@@ -107,6 +107,9 @@ namespace _01_ASP_MVC_Shop.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -127,6 +130,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 1,
                             Brand = "ASUS",
                             CategoryId = 1,
+                            Image = "01noutbuki.png",
                             Name = "ROG Strix G16",
                             Price = 58999m
                         },
@@ -135,6 +139,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 2,
                             Brand = "ASUS",
                             CategoryId = 1,
+                            Image = "01noutbuki.png",
                             Name = "TUF Gaming A15",
                             Price = 36999m
                         },
@@ -143,6 +148,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 3,
                             Brand = "ASUS",
                             CategoryId = 1,
+                            Image = "01noutbuki.png",
                             Name = "ZenBook 14",
                             Price = 38999m
                         },
@@ -151,6 +157,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 4,
                             Brand = "Apple",
                             CategoryId = 1,
+                            Image = "01noutbuki.png",
                             Name = "MacBook Air M2",
                             Price = 45999m
                         },
@@ -159,6 +166,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 5,
                             Brand = "Apple",
                             CategoryId = 1,
+                            Image = "01noutbuki.png",
                             Name = "MacBook Pro 14 M3",
                             Price = 89999m
                         },
@@ -167,6 +175,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 6,
                             Brand = "Lenovo",
                             CategoryId = 1,
+                            Image = "01noutbuki.png",
                             Name = "ThinkPad X13",
                             Price = 39999m
                         },
@@ -175,6 +184,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 7,
                             Brand = "Lenovo",
                             CategoryId = 1,
+                            Image = "01noutbuki.png",
                             Name = "Legion 5 Pro",
                             Price = 54999m
                         },
@@ -183,110 +193,124 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 8,
                             Brand = "Lenovo",
                             CategoryId = 1,
+                            Image = "01noutbuki.png",
                             Name = "IdeaPad 5",
                             Price = 21999m
                         },
                         new
                         {
                             Id = 9,
-                            Brand = "HP",
+                            Brand = "Acer",
                             CategoryId = 1,
-                            Name = "HP Pavilion 15",
-                            Price = 27999m
+                            Image = "01noutbuki.png",
+                            Name = "Predator Helios 16",
+                            Price = 67999m
                         },
                         new
                         {
                             Id = 10,
-                            Brand = "HP",
-                            CategoryId = 1,
-                            Name = "HP Omen 16",
-                            Price = 62999m
-                        },
-                        new
-                        {
-                            Id = 11,
                             Brand = "Acer",
                             CategoryId = 1,
-                            Name = "Acer Nitro 5",
+                            Image = "01noutbuki.png",
+                            Name = "Swift X",
                             Price = 32999m
                         },
                         new
                         {
-                            Id = 12,
-                            Brand = "Acer",
+                            Id = 11,
+                            Brand = "HP",
                             CategoryId = 1,
-                            Name = "Acer Swift 3",
-                            Price = 23999m
+                            Image = "01noutbuki.png",
+                            Name = "OMEN 16",
+                            Price = 55999m
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Brand = "HP",
+                            CategoryId = 1,
+                            Image = "01noutbuki.png",
+                            Name = "Pavilion 15",
+                            Price = 21999m
                         },
                         new
                         {
                             Id = 13,
                             Brand = "Dell",
                             CategoryId = 1,
-                            Name = "Dell XPS 13",
-                            Price = 54999m
+                            Image = "01noutbuki.png",
+                            Name = "XPS 13",
+                            Price = 49999m
                         },
                         new
                         {
                             Id = 14,
                             Brand = "Dell",
                             CategoryId = 1,
-                            Name = "Dell Inspiron 14",
-                            Price = 28999m
+                            Image = "01noutbuki.png",
+                            Name = "Inspiron 15",
+                            Price = 23999m
                         },
                         new
                         {
                             Id = 15,
-                            Brand = "MSI",
+                            Brand = "Microsoft",
                             CategoryId = 1,
-                            Name = "MSI Katana 15",
-                            Price = 41999m
+                            Image = "01noutbuki.png",
+                            Name = "Surface Laptop 5",
+                            Price = 57999m
                         },
                         new
                         {
                             Id = 16,
-                            Brand = "MSI",
-                            CategoryId = 1,
-                            Name = "MSI Stealth 16",
-                            Price = 72999m
-                        },
-                        new
-                        {
-                            Id = 17,
-                            Brand = "Gigabyte",
-                            CategoryId = 1,
-                            Name = "Gigabyte G5",
-                            Price = 33999m
-                        },
-                        new
-                        {
-                            Id = 18,
-                            Brand = "Huawei",
-                            CategoryId = 1,
-                            Name = "Huawei MateBook D15",
-                            Price = 25999m
-                        },
-                        new
-                        {
-                            Id = 19,
                             Brand = "Samsung",
                             CategoryId = 1,
+                            Image = "01noutbuki.png",
                             Name = "Samsung Galaxy Book3",
                             Price = 34999m
                         },
                         new
                         {
-                            Id = 20,
+                            Id = 17,
                             Brand = "Razer",
                             CategoryId = 1,
+                            Image = "01noutbuki.png",
                             Name = "Razer Blade 15",
                             Price = 79999m
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Brand = "Acer",
+                            CategoryId = 1,
+                            Image = "01noutbuki.png",
+                            Name = "Nitro 5",
+                            Price = 27999m
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Brand = "ASUS",
+                            CategoryId = 1,
+                            Image = "01noutbuki.png",
+                            Name = "VivoBook 15",
+                            Price = 19999m
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Brand = "Dell",
+                            CategoryId = 1,
+                            Image = "01noutbuki.png",
+                            Name = "Latitude 7440",
+                            Price = 46999m
                         },
                         new
                         {
                             Id = 21,
                             Brand = "ASUS",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "ROG Strix GT15",
                             Price = 65999m
                         },
@@ -295,6 +319,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 22,
                             Brand = "HP",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "HP Omen 45L",
                             Price = 89999m
                         },
@@ -303,6 +328,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 23,
                             Brand = "Acer",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "Acer Predator Orion 3000",
                             Price = 72999m
                         },
@@ -311,6 +337,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 24,
                             Brand = "Lenovo",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "Lenovo Legion Tower 5",
                             Price = 68999m
                         },
@@ -319,6 +346,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 25,
                             Brand = "Dell",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "Alienware Aurora R15",
                             Price = 119999m
                         },
@@ -327,6 +355,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 26,
                             Brand = "MSI",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "MSI Infinite X2",
                             Price = 94999m
                         },
@@ -335,6 +364,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 27,
                             Brand = "Apple",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "Mac Studio M2",
                             Price = 99999m
                         },
@@ -343,6 +373,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 28,
                             Brand = "Apple",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "Mac Mini M2",
                             Price = 29999m
                         },
@@ -351,6 +382,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 29,
                             Brand = "ASUS",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "ExpertCenter D5",
                             Price = 25999m
                         },
@@ -359,6 +391,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 30,
                             Brand = "HP",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "ProDesk 400",
                             Price = 21999m
                         },
@@ -367,6 +400,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 31,
                             Brand = "Lenovo",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "ThinkCentre M70",
                             Price = 23999m
                         },
@@ -375,6 +409,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 32,
                             Brand = "Dell",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "OptiPlex 7000",
                             Price = 28999m
                         },
@@ -383,6 +418,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 33,
                             Brand = "Acer",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "Aspire TC",
                             Price = 19999m
                         },
@@ -391,6 +427,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 34,
                             Brand = "Gigabyte",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "AORUS Model X",
                             Price = 109999m
                         },
@@ -399,6 +436,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 35,
                             Brand = "MSI",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "Trident 3",
                             Price = 49999m
                         },
@@ -407,6 +445,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 36,
                             Brand = "HP",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "Pavilion Gaming TG01",
                             Price = 37999m
                         },
@@ -415,6 +454,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 37,
                             Brand = "Lenovo",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "IdeaCentre 5",
                             Price = 31999m
                         },
@@ -423,6 +463,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 38,
                             Brand = "Dell",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "Vostro 3910",
                             Price = 26999m
                         },
@@ -431,6 +472,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 39,
                             Brand = "ASUS",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "ROG G22CH",
                             Price = 74999m
                         },
@@ -439,6 +481,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 40,
                             Brand = "Acer",
                             CategoryId = 2,
+                            Image = "02kompyutery.png",
                             Name = "Veriton X",
                             Price = 22999m
                         },
@@ -447,6 +490,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 41,
                             Brand = "Samsung",
                             CategoryId = 3,
+                            Image = "03monitory.png",
                             Name = "Odyssey G7 27",
                             Price = 18999m
                         },
@@ -455,6 +499,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 42,
                             Brand = "LG",
                             CategoryId = 3,
+                            Image = "03monitory.png",
                             Name = "UltraGear 27GP850",
                             Price = 17999m
                         },
@@ -463,310 +508,349 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 43,
                             Brand = "ASUS",
                             CategoryId = 3,
-                            Name = "TUF VG27AQ",
-                            Price = 16999m
-                        },
-                        new
-                        {
-                            Id = 44,
-                            Brand = "Acer",
-                            CategoryId = 3,
-                            Name = "Predator XB273",
-                            Price = 19999m
-                        },
-                        new
-                        {
-                            Id = 45,
-                            Brand = "Dell",
-                            CategoryId = 3,
-                            Name = "Dell S2721DGF",
+                            Image = "03monitory.png",
+                            Name = "ProArt PA278",
                             Price = 15999m
                         },
                         new
                         {
-                            Id = 46,
+                            Id = 44,
+                            Brand = "Dell",
+                            CategoryId = 3,
+                            Image = "03monitory.png",
+                            Name = "Dell S2721D",
+                            Price = 13999m
+                        },
+                        new
+                        {
+                            Id = 45,
                             Brand = "AOC",
                             CategoryId = 3,
-                            Name = "AOC CQ27G2",
+                            Image = "03monitory.png",
+                            Name = "AOC Q27G2",
                             Price = 12999m
                         },
                         new
                         {
-                            Id = 47,
-                            Brand = "MSI",
+                            Id = 46,
+                            Brand = "ViewSonic",
                             CategoryId = 3,
-                            Name = "MSI Optix MAG274",
-                            Price = 14999m
+                            Image = "03monitory.png",
+                            Name = "ViewSonic VX2758",
+                            Price = 11999m
+                        },
+                        new
+                        {
+                            Id = 47,
+                            Brand = "BenQ",
+                            CategoryId = 3,
+                            Image = "03monitory.png",
+                            Name = "BenQ EX2780Q",
+                            Price = 16999m
                         },
                         new
                         {
                             Id = 48,
                             Brand = "Gigabyte",
                             CategoryId = 3,
+                            Image = "03monitory.png",
                             Name = "Gigabyte M27Q",
-                            Price = 13999m
-                        },
-                        new
-                        {
-                            Id = 49,
-                            Brand = "Philips",
-                            CategoryId = 3,
-                            Name = "Philips 272E1CA",
-                            Price = 9999m
-                        },
-                        new
-                        {
-                            Id = 50,
-                            Brand = "ViewSonic",
-                            CategoryId = 3,
-                            Name = "ViewSonic XG2405",
-                            Price = 10999m
-                        },
-                        new
-                        {
-                            Id = 51,
-                            Brand = "BenQ",
-                            CategoryId = 3,
-                            Name = "BenQ EX2780Q",
                             Price = 14999m
                         },
                         new
                         {
-                            Id = 52,
+                            Id = 49,
+                            Brand = "Samsung",
+                            CategoryId = 3,
+                            Image = "03monitory.png",
+                            Name = "Odyssey Neo G8",
+                            Price = 34999m
+                        },
+                        new
+                        {
+                            Id = 50,
                             Brand = "LG",
                             CategoryId = 3,
-                            Name = "LG 34GN850",
-                            Price = 29999m
+                            Image = "03monitory.png",
+                            Name = "LG 34WN80C",
+                            Price = 24999m
+                        },
+                        new
+                        {
+                            Id = 51,
+                            Brand = "ASUS",
+                            CategoryId = 3,
+                            Image = "03monitory.png",
+                            Name = "ASUS VG259QM",
+                            Price = 9999m
+                        },
+                        new
+                        {
+                            Id = 52,
+                            Brand = "Dell",
+                            CategoryId = 3,
+                            Image = "03monitory.png",
+                            Name = "Dell U2720Q",
+                            Price = 19999m
                         },
                         new
                         {
                             Id = 53,
-                            Brand = "Samsung",
+                            Brand = "Philips",
                             CategoryId = 3,
-                            Name = "Samsung S80UA",
-                            Price = 21999m
+                            Image = "03monitory.png",
+                            Name = "Philips 276E",
+                            Price = 8999m
                         },
                         new
                         {
                             Id = 54,
-                            Brand = "ASUS",
+                            Brand = "MSI",
                             CategoryId = 3,
-                            Name = "ASUS ProArt PA32",
-                            Price = 45999m
+                            Image = "03monitory.png",
+                            Name = "MSI Optix G241",
+                            Price = 7999m
                         },
                         new
                         {
                             Id = 55,
-                            Brand = "Dell",
+                            Brand = "HP",
                             CategoryId = 3,
-                            Name = "Dell P2422H",
+                            Image = "03monitory.png",
+                            Name = "HP X27",
                             Price = 8999m
                         },
                         new
                         {
                             Id = 56,
-                            Brand = "Acer",
+                            Brand = "Lenovo",
                             CategoryId = 3,
-                            Name = "Acer CB242Y",
-                            Price = 7999m
+                            Image = "03monitory.png",
+                            Name = "Lenovo G27",
+                            Price = 8499m
                         },
                         new
                         {
                             Id = 57,
-                            Brand = "HP",
+                            Brand = "Acer",
                             CategoryId = 3,
-                            Name = "HP X27",
-                            Price = 11999m
+                            Image = "03monitory.png",
+                            Name = "Acer Nitro VG240",
+                            Price = 7499m
                         },
                         new
                         {
                             Id = 58,
-                            Brand = "Lenovo",
+                            Brand = "Samsung",
                             CategoryId = 3,
-                            Name = "Lenovo G27q-30",
-                            Price = 10999m
+                            Image = "03monitory.png",
+                            Name = "Samsung S24R350",
+                            Price = 5999m
                         },
                         new
                         {
                             Id = 59,
-                            Brand = "MSI",
+                            Brand = "LG",
                             CategoryId = 3,
-                            Name = "MSI MPG341",
-                            Price = 32999m
+                            Image = "03monitory.png",
+                            Name = "LG 24MK600",
+                            Price = 5499m
                         },
                         new
                         {
                             Id = 60,
-                            Brand = "Gigabyte",
+                            Brand = "Dell",
                             CategoryId = 3,
-                            Name = "Gigabyte G32QC",
-                            Price = 18999m
+                            Image = "03monitory.png",
+                            Name = "Dell E2422H",
+                            Price = 4999m
                         },
                         new
                         {
                             Id = 61,
                             Brand = "Gigabyte",
                             CategoryId = 4,
+                            Image = "04videocarty.jpg",
                             Name = "RTX 4090 Gaming OC",
                             Price = 89999m
                         },
                         new
                         {
                             Id = 62,
-                            Brand = "ASUS",
+                            Brand = "MSI",
                             CategoryId = 4,
-                            Name = "RTX 4080 Super",
-                            Price = 59999m
+                            Image = "04videocarty.jpg",
+                            Name = "RTX 4080 SUPRIM",
+                            Price = 69999m
                         },
                         new
                         {
                             Id = 63,
-                            Brand = "MSI",
+                            Brand = "ASUS",
                             CategoryId = 4,
+                            Image = "04videocarty.jpg",
                             Name = "RTX 4070 Ti",
-                            Price = 44999m
+                            Price = 49999m
                         },
                         new
                         {
                             Id = 64,
                             Brand = "Gigabyte",
                             CategoryId = 4,
-                            Name = "RTX 4070",
-                            Price = 35999m
-                        },
-                        new
-                        {
-                            Id = 65,
-                            Brand = "ASUS",
-                            CategoryId = 4,
-                            Name = "RTX 4060 Ti",
-                            Price = 25999m
-                        },
-                        new
-                        {
-                            Id = 66,
-                            Brand = "MSI",
-                            CategoryId = 4,
+                            Image = "04videocarty.jpg",
                             Name = "RTX 4060",
                             Price = 19999m
                         },
                         new
                         {
-                            Id = 67,
+                            Id = 65,
                             Brand = "Sapphire",
                             CategoryId = 4,
+                            Image = "04videocarty.jpg",
                             Name = "RX 7900 XTX",
-                            Price = 54999m
+                            Price = 57999m
+                        },
+                        new
+                        {
+                            Id = 66,
+                            Brand = "PowerColor",
+                            CategoryId = 4,
+                            Image = "04videocarty.jpg",
+                            Name = "RX 7800 XT",
+                            Price = 34999m
+                        },
+                        new
+                        {
+                            Id = 67,
+                            Brand = "ASRock",
+                            CategoryId = 4,
+                            Image = "04videocarty.jpg",
+                            Name = "RX 7700 XT",
+                            Price = 29999m
                         },
                         new
                         {
                             Id = 68,
-                            Brand = "Sapphire",
-                            CategoryId = 4,
-                            Name = "RX 7900 XT",
-                            Price = 47999m
-                        },
-                        new
-                        {
-                            Id = 69,
-                            Brand = "Gigabyte",
-                            CategoryId = 4,
-                            Name = "RX 7800 XT",
-                            Price = 32999m
-                        },
-                        new
-                        {
-                            Id = 70,
-                            Brand = "ASRock",
-                            CategoryId = 4,
-                            Name = "RX 7700 XT",
-                            Price = 28999m
-                        },
-                        new
-                        {
-                            Id = 71,
                             Brand = "MSI",
                             CategoryId = 4,
+                            Image = "04videocarty.jpg",
                             Name = "RTX 3060",
                             Price = 14999m
                         },
                         new
                         {
-                            Id = 72,
+                            Id = 69,
                             Brand = "ASUS",
                             CategoryId = 4,
+                            Image = "04videocarty.jpg",
                             Name = "RTX 3050",
                             Price = 10999m
                         },
                         new
                         {
-                            Id = 73,
+                            Id = 70,
+                            Brand = "Gigabyte",
+                            CategoryId = 4,
+                            Image = "04videocarty.jpg",
+                            Name = "GTX 1660 Super",
+                            Price = 9999m
+                        },
+                        new
+                        {
+                            Id = 71,
                             Brand = "Sapphire",
                             CategoryId = 4,
+                            Image = "04videocarty.jpg",
                             Name = "RX 6600",
                             Price = 11999m
                         },
                         new
                         {
-                            Id = 74,
-                            Brand = "Gigabyte",
+                            Id = 72,
+                            Brand = "PowerColor",
                             CategoryId = 4,
+                            Image = "04videocarty.jpg",
                             Name = "RX 6500 XT",
                             Price = 8999m
                         },
                         new
                         {
-                            Id = 75,
-                            Brand = "ASUS",
+                            Id = 73,
+                            Brand = "EVGA",
                             CategoryId = 4,
-                            Name = "RTX 3080 Ti",
-                            Price = 34999m
+                            Image = "04videocarty.jpg",
+                            Name = "RTX 3080",
+                            Price = 32999m
+                        },
+                        new
+                        {
+                            Id = 74,
+                            Brand = "Zotac",
+                            CategoryId = 4,
+                            Image = "04videocarty.jpg",
+                            Name = "RTX 3070",
+                            Price = 24999m
+                        },
+                        new
+                        {
+                            Id = 75,
+                            Brand = "MSI",
+                            CategoryId = 4,
+                            Image = "04videocarty.jpg",
+                            Name = "RTX 2060",
+                            Price = 12999m
                         },
                         new
                         {
                             Id = 76,
-                            Brand = "MSI",
+                            Brand = "Sapphire",
                             CategoryId = 4,
-                            Name = "RTX 3090",
-                            Price = 39999m
+                            Image = "04videocarty.jpg",
+                            Name = "RX 5700 XT",
+                            Price = 13999m
                         },
                         new
                         {
                             Id = 77,
-                            Brand = "Sapphire",
+                            Brand = "NVIDIA",
                             CategoryId = 4,
-                            Name = "RX 6800 XT",
-                            Price = 25999m
+                            Image = "04videocarty.jpg",
+                            Name = "RTX 4050 Laptop GPU",
+                            Price = 9999m
                         },
                         new
                         {
                             Id = 78,
-                            Brand = "Gigabyte",
+                            Brand = "PNY",
                             CategoryId = 4,
-                            Name = "RX 6700 XT",
-                            Price = 19999m
+                            Image = "04videocarty.jpg",
+                            Name = "RTX 5000 Ada",
+                            Price = 109999m
                         },
                         new
                         {
                             Id = 79,
-                            Brand = "ASUS",
+                            Brand = "NVIDIA",
                             CategoryId = 4,
-                            Name = "RTX 3070",
-                            Price = 17999m
+                            Image = "04videocarty.jpg",
+                            Name = "A2000",
+                            Price = 25999m
                         },
                         new
                         {
                             Id = 80,
-                            Brand = "MSI",
+                            Brand = "ASRock",
                             CategoryId = 4,
-                            Name = "RTX 2060",
-                            Price = 8999m
+                            Image = "04videocarty.jpg",
+                            Name = "RX 6400",
+                            Price = 7999m
                         },
                         new
                         {
                             Id = 81,
                             Brand = "AMD",
                             CategoryId = 5,
+                            Image = "05prozesory.jpg",
                             Name = "Ryzen 9 7950X",
                             Price = 25999m
                         },
@@ -775,6 +859,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 82,
                             Brand = "AMD",
                             CategoryId = 5,
+                            Image = "05prozesory.jpg",
                             Name = "Ryzen 7 7800X3D",
                             Price = 18999m
                         },
@@ -783,78 +868,88 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 83,
                             Brand = "AMD",
                             CategoryId = 5,
+                            Image = "05prozesory.jpg",
                             Name = "Ryzen 5 7600X",
-                            Price = 9999m
+                            Price = 11999m
                         },
                         new
                         {
                             Id = 84,
                             Brand = "AMD",
                             CategoryId = 5,
-                            Name = "Ryzen 7 5800X",
-                            Price = 8999m
+                            Image = "05prozesory.jpg",
+                            Name = "Ryzen 5 5600",
+                            Price = 6999m
                         },
                         new
                         {
                             Id = 85,
-                            Brand = "AMD",
+                            Brand = "Intel",
                             CategoryId = 5,
-                            Name = "Ryzen 5 5600X",
-                            Price = 6999m
+                            Image = "05prozesory.jpg",
+                            Name = "Core i9-14900K",
+                            Price = 27999m
                         },
                         new
                         {
                             Id = 86,
                             Brand = "Intel",
                             CategoryId = 5,
-                            Name = "Core i9-14900K",
-                            Price = 27999m
+                            Image = "05prozesory.jpg",
+                            Name = "Core i7-14700K",
+                            Price = 19999m
                         },
                         new
                         {
                             Id = 87,
                             Brand = "Intel",
                             CategoryId = 5,
-                            Name = "Core i7-14700K",
-                            Price = 18999m
+                            Image = "05prozesory.jpg",
+                            Name = "Core i5-14600K",
+                            Price = 14999m
                         },
                         new
                         {
                             Id = 88,
                             Brand = "Intel",
                             CategoryId = 5,
-                            Name = "Core i5-14600K",
-                            Price = 11999m
+                            Image = "05prozesory.jpg",
+                            Name = "Core i5-13400",
+                            Price = 9999m
                         },
                         new
                         {
                             Id = 89,
                             Brand = "Intel",
                             CategoryId = 5,
-                            Name = "Core i7-13700K",
-                            Price = 16999m
+                            Image = "05prozesory.jpg",
+                            Name = "Core i3-13100",
+                            Price = 5999m
                         },
                         new
                         {
                             Id = 90,
-                            Brand = "Intel",
+                            Brand = "AMD",
                             CategoryId = 5,
-                            Name = "Core i5-13600K",
-                            Price = 10999m
+                            Image = "05prozesory.jpg",
+                            Name = "Ryzen 9 5900X",
+                            Price = 17999m
                         },
                         new
                         {
                             Id = 91,
                             Brand = "AMD",
                             CategoryId = 5,
-                            Name = "Ryzen 9 5900X",
-                            Price = 13999m
+                            Image = "05prozesory.jpg",
+                            Name = "Ryzen 7 5700X",
+                            Price = 10999m
                         },
                         new
                         {
                             Id = 92,
                             Brand = "AMD",
                             CategoryId = 5,
+                            Image = "05prozesory.jpg",
                             Name = "Ryzen 5 5500",
                             Price = 4999m
                         },
@@ -863,550 +958,619 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 93,
                             Brand = "Intel",
                             CategoryId = 5,
-                            Name = "Core i3-13100",
-                            Price = 4999m
+                            Image = "05prozesory.jpg",
+                            Name = "Xeon W-1370",
+                            Price = 22999m
                         },
                         new
                         {
                             Id = 94,
-                            Brand = "Intel",
+                            Brand = "AMD",
                             CategoryId = 5,
-                            Name = "Core i9-13900K",
-                            Price = 23999m
+                            Image = "05prozesory.jpg",
+                            Name = "Threadripper 7970X",
+                            Price = 99999m
                         },
                         new
                         {
                             Id = 95,
-                            Brand = "AMD",
+                            Brand = "Intel",
                             CategoryId = 5,
-                            Name = "Ryzen 7 7700X",
-                            Price = 14999m
+                            Image = "05prozesory.jpg",
+                            Name = "Core Ultra 7",
+                            Price = 18999m
                         },
                         new
                         {
                             Id = 96,
                             Brand = "Intel",
                             CategoryId = 5,
-                            Name = "Core i5-12400F",
-                            Price = 5999m
+                            Image = "05prozesory.jpg",
+                            Name = "Core Ultra 5",
+                            Price = 13999m
                         },
                         new
                         {
                             Id = 97,
                             Brand = "AMD",
                             CategoryId = 5,
-                            Name = "Ryzen 3 4100",
-                            Price = 2999m
+                            Image = "05prozesory.jpg",
+                            Name = "Athlon 3000G",
+                            Price = 1999m
                         },
                         new
                         {
                             Id = 98,
                             Brand = "Intel",
                             CategoryId = 5,
-                            Name = "Core i7-12700K",
-                            Price = 13999m
+                            Image = "05prozesory.jpg",
+                            Name = "Pentium Gold",
+                            Price = 2999m
                         },
                         new
                         {
                             Id = 99,
                             Brand = "AMD",
                             CategoryId = 5,
-                            Name = "Ryzen 9 7900X",
-                            Price = 20999m
+                            Image = "05prozesory.jpg",
+                            Name = "Ryzen 3 4100",
+                            Price = 3999m
                         },
                         new
                         {
                             Id = 100,
                             Brand = "Intel",
                             CategoryId = 5,
-                            Name = "Core i5-13400",
-                            Price = 7999m
+                            Image = "05prozesory.jpg",
+                            Name = "Core i9-13900KS",
+                            Price = 29999m
                         },
                         new
                         {
                             Id = 101,
                             Brand = "ASUS",
                             CategoryId = 6,
+                            Image = "06materinskykarty.jpg",
                             Name = "ROG Strix Z790-E",
                             Price = 18999m
                         },
                         new
                         {
                             Id = 102,
-                            Brand = "ASUS",
-                            CategoryId = 6,
-                            Name = "TUF B650-Plus",
-                            Price = 7999m
-                        },
-                        new
-                        {
-                            Id = 103,
                             Brand = "MSI",
                             CategoryId = 6,
+                            Image = "06materinskykarty.jpg",
                             Name = "MSI MPG Z790 Carbon",
                             Price = 17999m
                         },
                         new
                         {
-                            Id = 104,
-                            Brand = "MSI",
+                            Id = 103,
+                            Brand = "Gigabyte",
                             CategoryId = 6,
-                            Name = "MSI B550 Tomahawk",
-                            Price = 5999m
+                            Image = "06materinskykarty.jpg",
+                            Name = "Gigabyte Z790 AORUS Elite",
+                            Price = 15999m
+                        },
+                        new
+                        {
+                            Id = 104,
+                            Brand = "ASRock",
+                            CategoryId = 6,
+                            Image = "06materinskykarty.jpg",
+                            Name = "ASRock Z790 Steel Legend",
+                            Price = 13999m
                         },
                         new
                         {
                             Id = 105,
-                            Brand = "Gigabyte",
+                            Brand = "ASUS",
                             CategoryId = 6,
-                            Name = "Gigabyte Z790 Aorus Elite",
-                            Price = 14999m
+                            Image = "06materinskykarty.jpg",
+                            Name = "ASUS B650-PLUS",
+                            Price = 9999m
                         },
                         new
                         {
                             Id = 106,
-                            Brand = "Gigabyte",
+                            Brand = "MSI",
                             CategoryId = 6,
-                            Name = "Gigabyte B650 Aorus",
-                            Price = 8999m
+                            Image = "06materinskykarty.jpg",
+                            Name = "MSI B650 Tomahawk",
+                            Price = 10999m
                         },
                         new
                         {
                             Id = 107,
-                            Brand = "ASRock",
+                            Brand = "Gigabyte",
                             CategoryId = 6,
-                            Name = "ASRock Z790 Steel Legend",
-                            Price = 12999m
-                        },
-                        new
-                        {
-                            Id = 108,
-                            Brand = "ASRock",
-                            CategoryId = 6,
-                            Name = "ASRock B550M Pro4",
+                            Image = "06materinskykarty.jpg",
+                            Name = "Gigabyte B550M DS3H",
                             Price = 4999m
                         },
                         new
                         {
-                            Id = 109,
+                            Id = 108,
                             Brand = "ASUS",
                             CategoryId = 6,
+                            Image = "06materinskykarty.jpg",
                             Name = "ASUS Prime H610M",
                             Price = 3999m
                         },
                         new
                         {
-                            Id = 110,
+                            Id = 109,
                             Brand = "MSI",
                             CategoryId = 6,
-                            Name = "MSI PRO B760M",
-                            Price = 4999m
-                        },
-                        new
-                        {
-                            Id = 111,
-                            Brand = "Gigabyte",
-                            CategoryId = 6,
-                            Name = "Gigabyte H610M S2H",
+                            Image = "06materinskykarty.jpg",
+                            Name = "MSI PRO H610",
                             Price = 3499m
                         },
                         new
                         {
-                            Id = 112,
+                            Id = 110,
                             Brand = "ASRock",
                             CategoryId = 6,
-                            Name = "ASRock B650M PG",
-                            Price = 6999m
+                            Image = "06materinskykarty.jpg",
+                            Name = "ASRock B450 Pro4",
+                            Price = 2999m
+                        },
+                        new
+                        {
+                            Id = 111,
+                            Brand = "ASUS",
+                            CategoryId = 6,
+                            Image = "06materinskykarty.jpg",
+                            Name = "ROG Crosshair X670E",
+                            Price = 24999m
+                        },
+                        new
+                        {
+                            Id = 112,
+                            Brand = "MSI",
+                            CategoryId = 6,
+                            Image = "06materinskykarty.jpg",
+                            Name = "MSI MEG X670E Ace",
+                            Price = 27999m
                         },
                         new
                         {
                             Id = 113,
-                            Brand = "ASUS",
+                            Brand = "Gigabyte",
                             CategoryId = 6,
-                            Name = "ROG Crosshair X670E",
+                            Image = "06materinskykarty.jpg",
+                            Name = "Gigabyte X670 AORUS Master",
                             Price = 23999m
                         },
                         new
                         {
                             Id = 114,
-                            Brand = "MSI",
-                            CategoryId = 6,
-                            Name = "MSI MEG Z790 ACE",
-                            Price = 25999m
-                        },
-                        new
-                        {
-                            Id = 115,
-                            Brand = "Gigabyte",
-                            CategoryId = 6,
-                            Name = "Gigabyte X670 Aorus Master",
-                            Price = 21999m
-                        },
-                        new
-                        {
-                            Id = 116,
-                            Brand = "ASRock",
-                            CategoryId = 6,
-                            Name = "ASRock X570 Taichi",
-                            Price = 11999m
-                        },
-                        new
-                        {
-                            Id = 117,
                             Brand = "ASUS",
                             CategoryId = 6,
-                            Name = "ASUS Prime B550M-A",
-                            Price = 4499m
-                        },
-                        new
-                        {
-                            Id = 118,
-                            Brand = "MSI",
-                            CategoryId = 6,
-                            Name = "MSI B450 Tomahawk",
-                            Price = 3999m
-                        },
-                        new
-                        {
-                            Id = 119,
-                            Brand = "Gigabyte",
-                            CategoryId = 6,
-                            Name = "Gigabyte B760 Gaming X",
+                            Image = "06materinskykarty.jpg",
+                            Name = "ASUS TUF B760M",
                             Price = 8999m
                         },
                         new
                         {
-                            Id = 120,
+                            Id = 115,
+                            Brand = "MSI",
+                            CategoryId = 6,
+                            Image = "06materinskykarty.jpg",
+                            Name = "MSI B760 Gaming Plus",
+                            Price = 9499m
+                        },
+                        new
+                        {
+                            Id = 116,
+                            Brand = "Gigabyte",
+                            CategoryId = 6,
+                            Image = "06materinskykarty.jpg",
+                            Name = "Gigabyte H510M",
+                            Price = 2999m
+                        },
+                        new
+                        {
+                            Id = 117,
                             Brand = "ASRock",
                             CategoryId = 6,
-                            Name = "ASRock H610M-HDV",
-                            Price = 2999m
+                            Image = "06materinskykarty.jpg",
+                            Name = "ASRock H470 Steel Legend",
+                            Price = 3999m
+                        },
+                        new
+                        {
+                            Id = 118,
+                            Brand = "ASUS",
+                            CategoryId = 6,
+                            Image = "06materinskykarty.jpg",
+                            Name = "ROG Strix B550-F",
+                            Price = 7999m
+                        },
+                        new
+                        {
+                            Id = 119,
+                            Brand = "MSI",
+                            CategoryId = 6,
+                            Image = "06materinskykarty.jpg",
+                            Name = "MSI B550 Gaming Edge",
+                            Price = 7499m
+                        },
+                        new
+                        {
+                            Id = 120,
+                            Brand = "Gigabyte",
+                            CategoryId = 6,
+                            Image = "06materinskykarty.jpg",
+                            Name = "Gigabyte B760 AORUS Elite",
+                            Price = 10999m
                         },
                         new
                         {
                             Id = 121,
                             Brand = "Kingston",
                             CategoryId = 7,
+                            Image = "07operatyvnapamiat.jpg",
                             Name = "Kingston Fury 16GB DDR5",
                             Price = 3499m
                         },
                         new
                         {
                             Id = 122,
-                            Brand = "Kingston",
+                            Brand = "Corsair",
                             CategoryId = 7,
-                            Name = "Kingston Fury 32GB DDR5",
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "Corsair Vengeance 32GB DDR5",
                             Price = 6999m
                         },
                         new
                         {
                             Id = 123,
-                            Brand = "Corsair",
+                            Brand = "G.Skill",
                             CategoryId = 7,
-                            Name = "Corsair Vengeance 16GB DDR4",
-                            Price = 2499m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "G.Skill Trident Z 32GB",
+                            Price = 7499m
                         },
                         new
                         {
                             Id = 124,
-                            Brand = "Corsair",
+                            Brand = "Kingston",
                             CategoryId = 7,
-                            Name = "Corsair Vengeance 32GB DDR4",
-                            Price = 4999m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "Kingston Fury 8GB DDR4",
+                            Price = 999m
                         },
                         new
                         {
                             Id = 125,
-                            Brand = "G.Skill",
+                            Brand = "Crucial",
                             CategoryId = 7,
-                            Name = "G.Skill Trident Z 16GB",
-                            Price = 2999m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "Crucial 16GB DDR4",
+                            Price = 1999m
                         },
                         new
                         {
                             Id = 126,
-                            Brand = "G.Skill",
+                            Brand = "ADATA",
                             CategoryId = 7,
-                            Name = "G.Skill Trident Z 32GB",
-                            Price = 5999m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "ADATA XPG 16GB",
+                            Price = 1799m
                         },
                         new
                         {
                             Id = 127,
-                            Brand = "HyperX",
+                            Brand = "TeamGroup",
                             CategoryId = 7,
-                            Name = "HyperX Fury 16GB",
-                            Price = 2399m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "TeamGroup T-Force 32GB",
+                            Price = 6499m
                         },
                         new
                         {
                             Id = 128,
-                            Brand = "HyperX",
-                            CategoryId = 7,
-                            Name = "HyperX Fury 32GB",
-                            Price = 4799m
-                        },
-                        new
-                        {
-                            Id = 129,
-                            Brand = "TeamGroup",
-                            CategoryId = 7,
-                            Name = "TeamGroup T-Force 16GB",
-                            Price = 2199m
-                        },
-                        new
-                        {
-                            Id = 130,
-                            Brand = "TeamGroup",
-                            CategoryId = 7,
-                            Name = "TeamGroup T-Force 32GB",
-                            Price = 4299m
-                        },
-                        new
-                        {
-                            Id = 131,
                             Brand = "Patriot",
                             CategoryId = 7,
+                            Image = "07operatyvnapamiat.jpg",
                             Name = "Patriot Viper 16GB",
                             Price = 1999m
                         },
                         new
                         {
-                            Id = 132,
-                            Brand = "Patriot",
+                            Id = 129,
+                            Brand = "Corsair",
                             CategoryId = 7,
-                            Name = "Patriot Viper 32GB",
-                            Price = 3999m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "Corsair Dominator 64GB",
+                            Price = 14999m
+                        },
+                        new
+                        {
+                            Id = 130,
+                            Brand = "G.Skill",
+                            CategoryId = 7,
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "G.Skill Ripjaws 16GB",
+                            Price = 1899m
+                        },
+                        new
+                        {
+                            Id = 131,
+                            Brand = "Kingston",
+                            CategoryId = 7,
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "Kingston Fury 32GB",
+                            Price = 5999m
+                        },
+                        new
+                        {
+                            Id = 132,
+                            Brand = "Crucial",
+                            CategoryId = 7,
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "Crucial 32GB DDR5",
+                            Price = 7999m
                         },
                         new
                         {
                             Id = 133,
                             Brand = "ADATA",
                             CategoryId = 7,
-                            Name = "ADATA XPG 16GB",
-                            Price = 2299m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "ADATA XPG 32GB",
+                            Price = 7499m
                         },
                         new
                         {
                             Id = 134,
-                            Brand = "ADATA",
+                            Brand = "TeamGroup",
                             CategoryId = 7,
-                            Name = "ADATA XPG 32GB",
-                            Price = 4599m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "TeamGroup Elite 16GB",
+                            Price = 1799m
                         },
                         new
                         {
                             Id = 135,
-                            Brand = "Crucial",
+                            Brand = "Patriot",
                             CategoryId = 7,
-                            Name = "Crucial 16GB DDR4",
-                            Price = 1999m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "Patriot Signature 8GB",
+                            Price = 899m
                         },
                         new
                         {
                             Id = 136,
-                            Brand = "Crucial",
+                            Brand = "Corsair",
                             CategoryId = 7,
-                            Name = "Crucial 32GB DDR4",
-                            Price = 3999m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "Corsair LPX 16GB",
+                            Price = 1999m
                         },
                         new
                         {
                             Id = 137,
-                            Brand = "Kingston",
+                            Brand = "G.Skill",
                             CategoryId = 7,
-                            Name = "Kingston ValueRAM 8GB",
-                            Price = 999m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "G.Skill 8GB DDR4",
+                            Price = 899m
                         },
                         new
                         {
                             Id = 138,
-                            Brand = "Corsair",
+                            Brand = "Kingston",
                             CategoryId = 7,
-                            Name = "Corsair Dominator 32GB",
-                            Price = 7999m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "Kingston Server RAM",
+                            Price = 4999m
                         },
                         new
                         {
                             Id = 139,
-                            Brand = "G.Skill",
+                            Brand = "Micron",
                             CategoryId = 7,
-                            Name = "G.Skill Ripjaws 16GB",
-                            Price = 2499m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "Micron ECC 32GB",
+                            Price = 8999m
                         },
                         new
                         {
                             Id = 140,
-                            Brand = "HyperX",
+                            Brand = "Samsung",
                             CategoryId = 7,
-                            Name = "HyperX Impact 16GB",
-                            Price = 2699m
+                            Image = "07operatyvnapamiat.jpg",
+                            Name = "Samsung DDR5 16GB",
+                            Price = 3499m
                         },
                         new
                         {
                             Id = 141,
                             Brand = "Samsung",
                             CategoryId = 8,
+                            Image = "08ssd.jpg",
                             Name = "Samsung 990 Pro 1TB",
                             Price = 4999m
                         },
                         new
                         {
                             Id = 142,
-                            Brand = "Samsung",
+                            Brand = "WD",
                             CategoryId = 8,
-                            Name = "Samsung 980 Pro 2TB",
-                            Price = 7999m
+                            Image = "08ssd.jpg",
+                            Name = "WD Black SN850X",
+                            Price = 4799m
                         },
                         new
                         {
                             Id = 143,
-                            Brand = "WD",
+                            Brand = "Kingston",
                             CategoryId = 8,
-                            Name = "WD Black SN850X 1TB",
-                            Price = 4499m
+                            Image = "08ssd.jpg",
+                            Name = "Kingston KC3000",
+                            Price = 4599m
                         },
                         new
                         {
                             Id = 144,
-                            Brand = "WD",
-                            CategoryId = 8,
-                            Name = "WD Blue SN570 1TB",
-                            Price = 2999m
-                        },
-                        new
-                        {
-                            Id = 145,
-                            Brand = "Kingston",
-                            CategoryId = 8,
-                            Name = "Kingston NV2 1TB",
-                            Price = 2499m
-                        },
-                        new
-                        {
-                            Id = 146,
-                            Brand = "Kingston",
-                            CategoryId = 8,
-                            Name = "Kingston KC3000 2TB",
-                            Price = 6999m
-                        },
-                        new
-                        {
-                            Id = 147,
                             Brand = "Crucial",
                             CategoryId = 8,
-                            Name = "Crucial P5 Plus 1TB",
+                            Image = "08ssd.jpg",
+                            Name = "Crucial P5 Plus",
                             Price = 3999m
                         },
                         new
                         {
-                            Id = 148,
-                            Brand = "Crucial",
-                            CategoryId = 8,
-                            Name = "Crucial MX500 1TB",
-                            Price = 3499m
-                        },
-                        new
-                        {
-                            Id = 149,
+                            Id = 145,
                             Brand = "ADATA",
                             CategoryId = 8,
-                            Name = "ADATA SX8200 Pro 1TB",
-                            Price = 3299m
+                            Image = "08ssd.jpg",
+                            Name = "ADATA Legend 960",
+                            Price = 3799m
                         },
                         new
                         {
-                            Id = 150,
-                            Brand = "ADATA",
-                            CategoryId = 8,
-                            Name = "ADATA Legend 960 2TB",
-                            Price = 6499m
-                        },
-                        new
-                        {
-                            Id = 151,
+                            Id = 146,
                             Brand = "Samsung",
                             CategoryId = 8,
-                            Name = "Samsung 870 EVO 1TB",
+                            Image = "08ssd.jpg",
+                            Name = "Samsung 970 EVO",
                             Price = 2999m
                         },
                         new
                         {
-                            Id = 152,
+                            Id = 147,
                             Brand = "WD",
                             CategoryId = 8,
-                            Name = "WD Green 480GB",
-                            Price = 1299m
+                            Image = "08ssd.jpg",
+                            Name = "WD Blue SN570",
+                            Price = 2499m
+                        },
+                        new
+                        {
+                            Id = 148,
+                            Brand = "Kingston",
+                            CategoryId = 8,
+                            Image = "08ssd.jpg",
+                            Name = "Kingston NV2",
+                            Price = 1999m
+                        },
+                        new
+                        {
+                            Id = 149,
+                            Brand = "Crucial",
+                            CategoryId = 8,
+                            Image = "08ssd.jpg",
+                            Name = "Crucial BX500",
+                            Price = 1499m
+                        },
+                        new
+                        {
+                            Id = 150,
+                            Brand = "Samsung",
+                            CategoryId = 8,
+                            Image = "08ssd.jpg",
+                            Name = "Samsung 870 QVO",
+                            Price = 2299m
+                        },
+                        new
+                        {
+                            Id = 151,
+                            Brand = "WD",
+                            CategoryId = 8,
+                            Image = "08ssd.jpg",
+                            Name = "WD Green SSD",
+                            Price = 1199m
+                        },
+                        new
+                        {
+                            Id = 152,
+                            Brand = "ADATA",
+                            CategoryId = 8,
+                            Image = "08ssd.jpg",
+                            Name = "ADATA SU800",
+                            Price = 1399m
                         },
                         new
                         {
                             Id = 153,
                             Brand = "Kingston",
                             CategoryId = 8,
-                            Name = "Kingston A400 480GB",
-                            Price = 1199m
+                            Image = "08ssd.jpg",
+                            Name = "Kingston A400",
+                            Price = 999m
                         },
                         new
                         {
                             Id = 154,
-                            Brand = "Seagate",
+                            Brand = "Samsung",
                             CategoryId = 8,
-                            Name = "Seagate FireCuda 530 1TB",
-                            Price = 5499m
+                            Image = "08ssd.jpg",
+                            Name = "Samsung T7 Portable",
+                            Price = 3999m
                         },
                         new
                         {
                             Id = 155,
-                            Brand = "Samsung",
+                            Brand = "WD",
                             CategoryId = 8,
-                            Name = "Samsung 990 Pro 2TB",
-                            Price = 8999m
+                            Image = "08ssd.jpg",
+                            Name = "WD My Passport SSD",
+                            Price = 3799m
                         },
                         new
                         {
                             Id = 156,
-                            Brand = "WD",
+                            Brand = "Crucial",
                             CategoryId = 8,
-                            Name = "WD Black SN770 1TB",
-                            Price = 3499m
+                            Image = "08ssd.jpg",
+                            Name = "Crucial X8 Portable",
+                            Price = 3599m
                         },
                         new
                         {
                             Id = 157,
-                            Brand = "Kingston",
+                            Brand = "Seagate",
                             CategoryId = 8,
-                            Name = "Kingston Fury Renegade 1TB",
-                            Price = 4299m
+                            Image = "08ssd.jpg",
+                            Name = "Seagate FireCuda 530",
+                            Price = 5499m
                         },
                         new
                         {
                             Id = 158,
-                            Brand = "Crucial",
+                            Brand = "PNY",
                             CategoryId = 8,
-                            Name = "Crucial P3 1TB",
-                            Price = 2799m
+                            Image = "08ssd.jpg",
+                            Name = "PNY CS3140",
+                            Price = 4899m
                         },
                         new
                         {
                             Id = 159,
-                            Brand = "ADATA",
+                            Brand = "TeamGroup",
                             CategoryId = 8,
-                            Name = "ADATA SU650 480GB",
-                            Price = 1099m
+                            Image = "08ssd.jpg",
+                            Name = "TeamGroup MP44",
+                            Price = 4299m
                         },
                         new
                         {
                             Id = 160,
-                            Brand = "Samsung",
+                            Brand = "Gigabyte",
                             CategoryId = 8,
-                            Name = "Samsung T7 1TB External",
-                            Price = 3999m
+                            Image = "08ssd.jpg",
+                            Name = "Gigabyte AORUS Gen4",
+                            Price = 4599m
                         },
                         new
                         {
                             Id = 161,
                             Brand = "Logitech",
                             CategoryId = 9,
+                            Image = "09peryfyria.jpg",
                             Name = "MX Master 3S",
                             Price = 3999m
                         },
@@ -1415,7 +1579,8 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 162,
                             Brand = "Logitech",
                             CategoryId = 9,
-                            Name = "G Pro X Superlight",
+                            Image = "09peryfyria.jpg",
+                            Name = "G Pro Wireless",
                             Price = 4999m
                         },
                         new
@@ -1423,6 +1588,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 163,
                             Brand = "Razer",
                             CategoryId = 9,
+                            Image = "09peryfyria.jpg",
                             Name = "Razer DeathAdder V3",
                             Price = 3499m
                         },
@@ -1431,142 +1597,160 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 164,
                             Brand = "SteelSeries",
                             CategoryId = 9,
+                            Image = "09peryfyria.jpg",
                             Name = "SteelSeries Rival 5",
-                            Price = 2499m
+                            Price = 2999m
                         },
                         new
                         {
                             Id = 165,
-                            Brand = "HyperX",
+                            Brand = "Corsair",
                             CategoryId = 9,
-                            Name = "HyperX Alloy Origins",
-                            Price = 3999m
+                            Image = "09peryfyria.jpg",
+                            Name = "Corsair K95 RGB",
+                            Price = 6999m
                         },
                         new
                         {
                             Id = 166,
-                            Brand = "Corsair",
-                            CategoryId = 9,
-                            Name = "Corsair K70 RGB",
-                            Price = 4999m
-                        },
-                        new
-                        {
-                            Id = 167,
                             Brand = "Logitech",
                             CategoryId = 9,
+                            Image = "09peryfyria.jpg",
                             Name = "Logitech G915",
                             Price = 7999m
                         },
                         new
                         {
-                            Id = 168,
+                            Id = 167,
                             Brand = "Razer",
                             CategoryId = 9,
-                            Name = "Razer BlackWidow V4",
-                            Price = 5499m
+                            Image = "09peryfyria.jpg",
+                            Name = "Razer BlackWidow",
+                            Price = 5999m
+                        },
+                        new
+                        {
+                            Id = 168,
+                            Brand = "HyperX",
+                            CategoryId = 9,
+                            Image = "09peryfyria.jpg",
+                            Name = "HyperX Alloy Core",
+                            Price = 2499m
                         },
                         new
                         {
                             Id = 169,
-                            Brand = "SteelSeries",
+                            Brand = "Logitech",
                             CategoryId = 9,
-                            Name = "SteelSeries Apex 7",
-                            Price = 4499m
-                        },
-                        new
-                        {
-                            Id = 170,
-                            Brand = "HyperX",
-                            CategoryId = 9,
-                            Name = "HyperX Cloud II",
+                            Image = "09peryfyria.jpg",
+                            Name = "Logitech C920",
                             Price = 2999m
                         },
                         new
                         {
-                            Id = 171,
-                            Brand = "Logitech",
-                            CategoryId = 9,
-                            Name = "Logitech G Pro X Headset",
-                            Price = 3999m
-                        },
-                        new
-                        {
-                            Id = 172,
+                            Id = 170,
                             Brand = "Razer",
                             CategoryId = 9,
-                            Name = "Razer Kraken V3",
+                            Image = "09peryfyria.jpg",
+                            Name = "Razer Kiyo",
                             Price = 3499m
                         },
                         new
                         {
-                            Id = 173,
-                            Brand = "Corsair",
+                            Id = 171,
+                            Brand = "Blue",
                             CategoryId = 9,
-                            Name = "Corsair HS80",
-                            Price = 4499m
+                            Image = "09peryfyria.jpg",
+                            Name = "Blue Yeti Mic",
+                            Price = 4999m
+                        },
+                        new
+                        {
+                            Id = 172,
+                            Brand = "HyperX",
+                            CategoryId = 9,
+                            Image = "09peryfyria.jpg",
+                            Name = "HyperX Cloud II",
+                            Price = 3999m
+                        },
+                        new
+                        {
+                            Id = 173,
+                            Brand = "SteelSeries",
+                            CategoryId = 9,
+                            Image = "09peryfyria.jpg",
+                            Name = "SteelSeries Arctis 7",
+                            Price = 4999m
                         },
                         new
                         {
                             Id = 174,
                             Brand = "Logitech",
                             CategoryId = 9,
-                            Name = "Logitech C920 Webcam",
-                            Price = 2999m
-                        },
-                        new
-                        {
-                            Id = 175,
-                            Brand = "Razer",
-                            CategoryId = 9,
-                            Name = "Razer Kiyo Pro",
+                            Image = "09peryfyria.jpg",
+                            Name = "Logitech Z623",
                             Price = 5999m
                         },
                         new
                         {
-                            Id = 176,
-                            Brand = "SteelSeries",
+                            Id = 175,
+                            Brand = "Creative",
                             CategoryId = 9,
-                            Name = "SteelSeries Arctis 7",
-                            Price = 4999m
+                            Image = "09peryfyria.jpg",
+                            Name = "Creative Pebble",
+                            Price = 1999m
+                        },
+                        new
+                        {
+                            Id = 176,
+                            Brand = "TP-Link",
+                            CategoryId = 9,
+                            Image = "09peryfyria.jpg",
+                            Name = "TP-Link USB Adapter",
+                            Price = 799m
                         },
                         new
                         {
                             Id = 177,
-                            Brand = "HyperX",
+                            Brand = "Logitech",
                             CategoryId = 9,
-                            Name = "HyperX Pulsefire Haste",
-                            Price = 1999m
+                            Image = "09peryfyria.jpg",
+                            Name = "Logitech Mouse Pad",
+                            Price = 499m
                         },
                         new
                         {
                             Id = 178,
-                            Brand = "Logitech",
+                            Brand = "Razer",
                             CategoryId = 9,
-                            Name = "Logitech G502 X",
-                            Price = 3299m
+                            Image = "09peryfyria.jpg",
+                            Name = "Razer Mouse Bungee",
+                            Price = 999m
                         },
                         new
                         {
                             Id = 179,
-                            Brand = "Razer",
+                            Brand = "Elgato",
                             CategoryId = 9,
-                            Name = "Razer Basilisk V3",
-                            Price = 2999m
+                            Image = "09peryfyria.jpg",
+                            Name = "Elgato Stream Deck",
+                            Price = 5999m
                         },
                         new
                         {
                             Id = 180,
-                            Brand = "Corsair",
+                            Brand = "Logitech",
                             CategoryId = 9,
-                            Name = "Corsair MM700 RGB Pad",
-                            Price = 1999m
+                            Image = "09peryfyria.jpg",
+                            Name = "Logitech Brio",
+                            Price = 6999m
                         },
                         new
                         {
                             Id = 181,
                             Brand = "TP-Link",
                             CategoryId = 10,
+                            Image = "10meregeve.png",
                             Name = "Archer AX55",
                             Price = 3499m
                         },
@@ -1575,6 +1759,7 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 182,
                             Brand = "TP-Link",
                             CategoryId = 10,
+                            Image = "10meregeve.png",
                             Name = "Archer AX73",
                             Price = 4999m
                         },
@@ -1583,144 +1768,162 @@ namespace _01_ASP_MVC_Shop.Migrations
                             Id = 183,
                             Brand = "TP-Link",
                             CategoryId = 10,
-                            Name = "Deco X20",
-                            Price = 6999m
+                            Image = "10meregeve.png",
+                            Name = "Archer C6",
+                            Price = 1999m
                         },
                         new
                         {
                             Id = 184,
-                            Brand = "ASUS",
+                            Brand = "TP-Link",
                             CategoryId = 10,
-                            Name = "RT-AX86U",
-                            Price = 8999m
+                            Image = "10meregeve.png",
+                            Name = "Deco X20",
+                            Price = 6999m
                         },
                         new
                         {
                             Id = 185,
                             Brand = "ASUS",
                             CategoryId = 10,
-                            Name = "RT-AX58U",
-                            Price = 4999m
+                            Image = "10meregeve.png",
+                            Name = "ASUS RT-AX58U",
+                            Price = 3999m
                         },
                         new
                         {
                             Id = 186,
-                            Brand = "Netgear",
+                            Brand = "ASUS",
                             CategoryId = 10,
-                            Name = "Nighthawk AX12",
-                            Price = 12999m
+                            Image = "10meregeve.png",
+                            Name = "ASUS RT-AX88U",
+                            Price = 7999m
                         },
                         new
                         {
                             Id = 187,
                             Brand = "Netgear",
                             CategoryId = 10,
-                            Name = "Nighthawk R7000",
-                            Price = 3999m
+                            Image = "10meregeve.png",
+                            Name = "Netgear Nighthawk",
+                            Price = 6999m
                         },
                         new
                         {
                             Id = 188,
                             Brand = "Ubiquiti",
                             CategoryId = 10,
-                            Name = "UniFi Dream Router",
-                            Price = 7999m
-                        },
-                        new
-                        {
-                            Id = 189,
-                            Brand = "Ubiquiti",
-                            CategoryId = 10,
-                            Name = "UniFi AP AC Pro",
+                            Image = "10meregeve.png",
+                            Name = "Ubiquiti UniFi AP",
                             Price = 5999m
                         },
                         new
                         {
-                            Id = 190,
-                            Brand = "MikroTik",
+                            Id = 189,
+                            Brand = "TP-Link",
                             CategoryId = 10,
-                            Name = "MikroTik hAP ax3",
-                            Price = 3499m
+                            Image = "10meregeve.png",
+                            Name = "TP-Link Switch 8p",
+                            Price = 999m
+                        },
+                        new
+                        {
+                            Id = 190,
+                            Brand = "TP-Link",
+                            CategoryId = 10,
+                            Image = "10meregeve.png",
+                            Name = "TP-Link Switch 16p",
+                            Price = 1999m
                         },
                         new
                         {
                             Id = 191,
-                            Brand = "MikroTik",
+                            Brand = "D-Link",
                             CategoryId = 10,
-                            Name = "MikroTik RB4011",
-                            Price = 7999m
+                            Image = "10meregeve.png",
+                            Name = "D-Link DIR-825",
+                            Price = 1499m
                         },
                         new
                         {
                             Id = 192,
-                            Brand = "D-Link",
+                            Brand = "MikroTik",
                             CategoryId = 10,
-                            Name = "D-Link DIR-X5460",
-                            Price = 3999m
+                            Image = "10meregeve.png",
+                            Name = "MikroTik hAP ac2",
+                            Price = 2499m
                         },
                         new
                         {
                             Id = 193,
-                            Brand = "D-Link",
+                            Brand = "MikroTik",
                             CategoryId = 10,
-                            Name = "D-Link DIR-842",
-                            Price = 1999m
+                            Image = "10meregeve.png",
+                            Name = "MikroTik RB4011",
+                            Price = 7999m
                         },
                         new
                         {
                             Id = 194,
                             Brand = "TP-Link",
                             CategoryId = 10,
-                            Name = "TP-Link TL-SG108 Switch",
+                            Image = "10meregeve.png",
+                            Name = "TP-Link Range Extender",
                             Price = 999m
                         },
                         new
                         {
                             Id = 195,
-                            Brand = "Netgear",
+                            Brand = "ASUS",
                             CategoryId = 10,
-                            Name = "Netgear GS308 Switch",
-                            Price = 1299m
+                            Image = "10meregeve.png",
+                            Name = "ASUS Mesh Node",
+                            Price = 2999m
                         },
                         new
                         {
                             Id = 196,
-                            Brand = "ASUS",
+                            Brand = "Netgear",
                             CategoryId = 10,
-                            Name = "ASUS ZenWiFi XT8",
-                            Price = 12999m
+                            Image = "10meregeve.png",
+                            Name = "Netgear Switch 24p",
+                            Price = 4999m
                         },
                         new
                         {
                             Id = 197,
-                            Brand = "TP-Link",
+                            Brand = "Ubiquiti",
                             CategoryId = 10,
-                            Name = "TP-Link RE650 Extender",
-                            Price = 1999m
+                            Image = "10meregeve.png",
+                            Name = "Ubiquiti Switch Lite",
+                            Price = 3999m
                         },
                         new
                         {
                             Id = 198,
-                            Brand = "Netgear",
+                            Brand = "TP-Link",
                             CategoryId = 10,
-                            Name = "Netgear Orbi RBK352",
-                            Price = 8999m
+                            Image = "10meregeve.png",
+                            Name = "TP-Link LTE Router",
+                            Price = 3499m
                         },
                         new
                         {
                             Id = 199,
-                            Brand = "MikroTik",
+                            Brand = "Huawei",
                             CategoryId = 10,
-                            Name = "MikroTik CRS326",
-                            Price = 9999m
+                            Image = "10meregeve.png",
+                            Name = "Huawei B535",
+                            Price = 2999m
                         },
                         new
                         {
                             Id = 200,
-                            Brand = "Ubiquiti",
+                            Brand = "Zyxel",
                             CategoryId = 10,
-                            Name = "Ubiquiti UniFi Switch 8",
-                            Price = 6499m
+                            Image = "10meregeve.png",
+                            Name = "Zyxel Armor G5",
+                            Price = 8999m
                         });
                 });
 

@@ -94,7 +94,7 @@ $.validator.addMethod( "accept", function( value, element, param ) {
 		// see: https://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
 		// Escape also "/*" as "/.*" as a wildcard
 		typeParam = typeParam
-				.replace( /[\-\[\]\/\{\}\(\)\+\?\.\\\^\$\|]/g, "\\$&" )
+				.replace( /[\-\[\]\/\{\}\(\)\+\?\.//\^\$\|]/g, "//$&" )
 				.replace( /,/g, "|" )
 				.replace( /\/\*/g, "/.*" );
 
@@ -295,7 +295,7 @@ $.validator.addMethod( "cifES", function( value, element ) {
 $.validator.addMethod( "cnhBR", function( value ) {
 
   // Removing special characters from value
-  value = value.replace( /([~!@#$%^&*()_+=`{}\[\]\-|\\:;'<>,.\/? ])+/g, "" );
+  value = value.replace( /([~!@#$%^&*()_+=`{}\[\]\-|//:;'<>,.\/? ])+/g, "" );
 
   // Checking value to have 11 digits only
   if ( value.length !== 11 ) {
@@ -425,7 +425,7 @@ $.validator.addMethod( "cpfBR", function( value, element ) {
 	}
 
 	// Removing special characters from value
-	value = value.replace( /([~!@#$%^&*()_+=`{}\[\]\-|\\:;'<>,.\/? ])+/g, "" );
+	value = value.replace( /([~!@#$%^&*()_+=`{}\[\]\-|//:;'<>,.\/? ])+/g, "" );
 
 	// Checking value to have 11 digits only
 	if ( value.length !== 11 ) {
@@ -626,7 +626,7 @@ $.validator.addMethod( "currency", function( value, element, param ) {
 
     symbol = symbol.replace( /,/g, "" );
     symbol = soft ? symbol + "]" : symbol + "]?";
-    regex = "^[" + symbol + "([1-9]{1}[0-9]{0,2}(\\,[0-9]{3})*(\\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\\.[0-9]{0,2})?|0(\\.[0-9]{0,2})?|(\\.[0-9]{1,2})?)$";
+    regex = "^[" + symbol + "([1-9]{1}[0-9]{0,2}(//,[0-9]{3})*(//.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(//.[0-9]{0,2})?|0(//.[0-9]{0,2})?|(//.[0-9]{1,2})?)$";
     regex = new RegExp( regex );
     return this.optional( element ) || regex.test( value );
 
@@ -683,7 +683,7 @@ $.validator.addMethod( "dateNL", function( value, element ) {
 // Older "accept" file extension method. Old docs: http://docs.jquery.com/Plugins/Validation/Methods/accept
 $.validator.addMethod( "extension", function( value, element, param ) {
 	param = typeof param === "string" ? param.replace( /,/g, "|" ) : "png|jpe?g|gif";
-	return this.optional( element ) || value.match( new RegExp( "\\.(" + param + ")$", "i" ) );
+	return this.optional( element ) || value.match( new RegExp( "//.(" + param + ")$", "i" ) );
 }, $.validator.format( "Please enter a value with a valid extension." ) );
 
 /**
@@ -751,70 +751,70 @@ $.validator.addMethod( "iban", function( value, element ) {
 	// Check the country code and find the country specific format
 	countrycode = iban.substring( 0, 2 );
 	bbancountrypatterns = {
-		"AL": "\\d{8}[\\dA-Z]{16}",
-		"AD": "\\d{8}[\\dA-Z]{12}",
-		"AT": "\\d{16}",
-		"AZ": "[\\dA-Z]{4}\\d{20}",
-		"BE": "\\d{12}",
-		"BH": "[A-Z]{4}[\\dA-Z]{14}",
-		"BA": "\\d{16}",
-		"BR": "\\d{23}[A-Z][\\dA-Z]",
-		"BG": "[A-Z]{4}\\d{6}[\\dA-Z]{8}",
-		"CR": "\\d{17}",
-		"HR": "\\d{17}",
-		"CY": "\\d{8}[\\dA-Z]{16}",
-		"CZ": "\\d{20}",
-		"DK": "\\d{14}",
-		"DO": "[A-Z]{4}\\d{20}",
-		"EE": "\\d{16}",
-		"FO": "\\d{14}",
-		"FI": "\\d{14}",
-		"FR": "\\d{10}[\\dA-Z]{11}\\d{2}",
-		"GE": "[\\dA-Z]{2}\\d{16}",
-		"DE": "\\d{18}",
-		"GI": "[A-Z]{4}[\\dA-Z]{15}",
-		"GR": "\\d{7}[\\dA-Z]{16}",
-		"GL": "\\d{14}",
-		"GT": "[\\dA-Z]{4}[\\dA-Z]{20}",
-		"HU": "\\d{24}",
-		"IS": "\\d{22}",
-		"IE": "[\\dA-Z]{4}\\d{14}",
-		"IL": "\\d{19}",
-		"IT": "[A-Z]\\d{10}[\\dA-Z]{12}",
-		"KZ": "\\d{3}[\\dA-Z]{13}",
-		"KW": "[A-Z]{4}[\\dA-Z]{22}",
-		"LV": "[A-Z]{4}[\\dA-Z]{13}",
-		"LB": "\\d{4}[\\dA-Z]{20}",
-		"LI": "\\d{5}[\\dA-Z]{12}",
-		"LT": "\\d{16}",
-		"LU": "\\d{3}[\\dA-Z]{13}",
-		"MK": "\\d{3}[\\dA-Z]{10}\\d{2}",
-		"MT": "[A-Z]{4}\\d{5}[\\dA-Z]{18}",
-		"MR": "\\d{23}",
-		"MU": "[A-Z]{4}\\d{19}[A-Z]{3}",
-		"MC": "\\d{10}[\\dA-Z]{11}\\d{2}",
-		"MD": "[\\dA-Z]{2}\\d{18}",
-		"ME": "\\d{18}",
-		"NL": "[A-Z]{4}\\d{10}",
-		"NO": "\\d{11}",
-		"PK": "[\\dA-Z]{4}\\d{16}",
-		"PS": "[\\dA-Z]{4}\\d{21}",
-		"PL": "\\d{24}",
-		"PT": "\\d{21}",
-		"RO": "[A-Z]{4}[\\dA-Z]{16}",
-		"SM": "[A-Z]\\d{10}[\\dA-Z]{12}",
-		"SA": "\\d{2}[\\dA-Z]{18}",
-		"RS": "\\d{18}",
-		"SK": "\\d{20}",
-		"SI": "\\d{15}",
-		"ES": "\\d{20}",
-		"SE": "\\d{20}",
-		"CH": "\\d{5}[\\dA-Z]{12}",
-		"TN": "\\d{20}",
-		"TR": "\\d{5}[\\dA-Z]{17}",
-		"AE": "\\d{3}\\d{16}",
-		"GB": "[A-Z]{4}\\d{14}",
-		"VG": "[\\dA-Z]{4}\\d{16}"
+		"AL": "//d{8}[//dA-Z]{16}",
+		"AD": "//d{8}[//dA-Z]{12}",
+		"AT": "//d{16}",
+		"AZ": "[//dA-Z]{4}//d{20}",
+		"BE": "//d{12}",
+		"BH": "[A-Z]{4}[//dA-Z]{14}",
+		"BA": "//d{16}",
+		"BR": "//d{23}[A-Z][//dA-Z]",
+		"BG": "[A-Z]{4}//d{6}[//dA-Z]{8}",
+		"CR": "//d{17}",
+		"HR": "//d{17}",
+		"CY": "//d{8}[//dA-Z]{16}",
+		"CZ": "//d{20}",
+		"DK": "//d{14}",
+		"DO": "[A-Z]{4}//d{20}",
+		"EE": "//d{16}",
+		"FO": "//d{14}",
+		"FI": "//d{14}",
+		"FR": "//d{10}[//dA-Z]{11}//d{2}",
+		"GE": "[//dA-Z]{2}//d{16}",
+		"DE": "//d{18}",
+		"GI": "[A-Z]{4}[//dA-Z]{15}",
+		"GR": "//d{7}[//dA-Z]{16}",
+		"GL": "//d{14}",
+		"GT": "[//dA-Z]{4}[//dA-Z]{20}",
+		"HU": "//d{24}",
+		"IS": "//d{22}",
+		"IE": "[//dA-Z]{4}//d{14}",
+		"IL": "//d{19}",
+		"IT": "[A-Z]//d{10}[//dA-Z]{12}",
+		"KZ": "//d{3}[//dA-Z]{13}",
+		"KW": "[A-Z]{4}[//dA-Z]{22}",
+		"LV": "[A-Z]{4}[//dA-Z]{13}",
+		"LB": "//d{4}[//dA-Z]{20}",
+		"LI": "//d{5}[//dA-Z]{12}",
+		"LT": "//d{16}",
+		"LU": "//d{3}[//dA-Z]{13}",
+		"MK": "//d{3}[//dA-Z]{10}//d{2}",
+		"MT": "[A-Z]{4}//d{5}[//dA-Z]{18}",
+		"MR": "//d{23}",
+		"MU": "[A-Z]{4}//d{19}[A-Z]{3}",
+		"MC": "//d{10}[//dA-Z]{11}//d{2}",
+		"MD": "[//dA-Z]{2}//d{18}",
+		"ME": "//d{18}",
+		"NL": "[A-Z]{4}//d{10}",
+		"NO": "//d{11}",
+		"PK": "[//dA-Z]{4}//d{16}",
+		"PS": "[//dA-Z]{4}//d{21}",
+		"PL": "//d{24}",
+		"PT": "//d{21}",
+		"RO": "[A-Z]{4}[//dA-Z]{16}",
+		"SM": "[A-Z]//d{10}[//dA-Z]{12}",
+		"SA": "//d{2}[//dA-Z]{18}",
+		"RS": "//d{18}",
+		"SK": "//d{20}",
+		"SI": "//d{15}",
+		"ES": "//d{20}",
+		"SE": "//d{20}",
+		"CH": "//d{5}[//dA-Z]{12}",
+		"TN": "//d{20}",
+		"TR": "//d{5}[//dA-Z]{17}",
+		"AE": "//d{3}//d{16}",
+		"GB": "[A-Z]{4}//d{14}",
+		"VG": "[//dA-Z]{4}//d{16}"
 	};
 
 	bbanpattern = bbancountrypatterns[ countrycode ];
@@ -827,7 +827,7 @@ $.validator.addMethod( "iban", function( value, element ) {
 	// Strict checking should return FALSE for unknown
 	// countries.
 	if ( typeof bbanpattern !== "undefined" ) {
-		ibanregexp = new RegExp( "^[A-Z]{2}\\d{2}" + bbanpattern + "$", "" );
+		ibanregexp = new RegExp( "^[A-Z]{2}//d{2}" + bbanpattern + "$", "" );
 		if ( !( ibanregexp.test( iban ) ) ) {
 			return false; // Invalid country specific format
 		}
@@ -1095,7 +1095,7 @@ $.validator.addMethod( "nisBR", function( value ) {
 	var multiplier;
 
 	// Removing special characters from value
-	value = value.replace( /([~!@#$%^&*()_+=`{}\[\]\-|\\:;'<>,.\/? ])+/g, "" );
+	value = value.replace( /([~!@#$%^&*()_+=`{}\[\]\-|//:;'<>,.\/? ])+/g, "" );
 
 	// Checking value to have 11 digits only
 	if ( value.length !== 11 ) {

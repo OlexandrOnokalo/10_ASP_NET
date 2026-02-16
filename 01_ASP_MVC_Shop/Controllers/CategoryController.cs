@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace PD411_Shop.Controllers
+namespace _01_ASP_MVC_Shop.Controllers
 {
     public class CategoryController : Controller
     {

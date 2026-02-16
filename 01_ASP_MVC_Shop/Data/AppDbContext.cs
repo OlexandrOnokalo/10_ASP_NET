@@ -5,7 +5,7 @@ namespace _01_ASP_MVC_Shop.Data
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options)
+        public AppDbContext(DbContextOptions options)
             : base(options)
         {
         }
@@ -48,6 +48,14 @@ namespace _01_ASP_MVC_Shop.Data
                       .HasForeignKey(p => p.CategoryId)
                       .OnDelete(DeleteBehavior.Cascade);
             });
+
+            // Relationships
+            // Category one to many Products
+            modelBuilder.Entity<ProductModel>()
+                .HasOne(p => p.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(p => p.CategoryId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             Seeder.Seed(modelBuilder);
         }

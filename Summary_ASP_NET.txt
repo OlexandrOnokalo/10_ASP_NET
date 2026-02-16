@@ -7735,23 +7735,341 @@ Views/Home/Index.cshtml
 
 Program.cs
 
-string? connectingString = ???????
-
-
 переносимо конекш стрінгу в 
 appsettings.json
 
-"Connection strings??????????????
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "LocalDb": "Server=localhost;Database=PD411_MVC_SHOP;Trusted_Connection=True;TrustServerCertificate=True;"
+  }
+}
+
 
 
 shared\Layout.cshtml
 
-
 підключаємо 
 href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-для додавання товару в контролеррі додаємо новий екшен 
-create???????
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PD411_Shop</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PD411_Shop.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Магазин</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Головна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Конфіденційність</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">Про нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Товари</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
 
-роюим нову вьюшку
-в формі додаємо metod???????????
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2026 - PD411_Shop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+
+Controllers/ProductController.cs
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PD411_Shop.Data;
+using PD411_Shop.Models;
+using PD411_Shop.ViewModels;
+
+namespace PD411_Shop.Controllers
+{
+    public class ProductController : Controller
+    {
+        private readonly AppDbContext _context;
+
+        public ProductController(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        public IActionResult Index()
+        {
+            var products = _context.Products.AsEnumerable();
+
+            return View(products);
+        }
+
+
+        // GET
+        public async Task<IActionResult> Create()
+        {
+            return View();
+        }
+
+        // POST
+        // [FromForm] - очікує дані у форматі multipart/form-data
+        [HttpPost]
+        public async Task<IActionResult> Create([FromForm]CreateProductVM vm)
+        {
+            var category = _context.Categories.FirstOrDefault();
+            if (category == null)
+            {
+                return View();
+            }
+
+            ProductModel model = new ProductModel \\ пперетвоюємо view model в productmodel
+            {
+                Name = vm.Name ?? string.Empty,
+                Amount = vm.Amount,
+                Color = vm.Color,
+                Description = vm.Description,
+                Price = vm.Price,
+                Category = category
+            };
+
+            // Save Image
+            if(vm.Image != null)
+            {
+                string root = Directory.GetCurrentDirectory();
+                string imagesPath = Path.Combine(root, "wwwroot", "images");
+                string ext = Path.GetExtension(vm.Image.FileName); \\вичитаємо розширення файлу
+                string name = Guid.NewGuid().ToString(); \\Guid.NewGuid() - генерує випадкове
+                string fileName = name + ext;
+                string filePath = Path.Combine(imagesPath, fileName); \\зберігаємо, вказуєм шлях і назву картинку
+
+                using var imageStream = vm.Image.OpenReadStream(); \\потік до картинки
+                using var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write); \\потік до файлу
+                imageStream.CopyTo(fileStream); \\копіюєм з одного потоку в інший
+
+                model.Image = fileName; \\зберігли назву картинки
+            }
+
+            await _context.Products.AddAsync(model);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+
+        // DELETE
+        public async Task<IActionResult> Delete(int id)
+        {
+            var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
+            if(product != null)
+            {
+                if(product.Image != null)
+                {
+                    string root = Directory.GetCurrentDirectory();
+                    string imagesPath = Path.Combine(root, "wwwroot", "images");
+                    string filePath = Path.Combine(imagesPath, product.Image);
+
+                    if(System.IO.File.Exists(filePath))
+                    {
+                        System.IO.File.Delete(filePath);  \\видаляємо картинку
+                    }
+                }
+
+                _context.Products.Remove(product);
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction("Index");
+        }
+    }
+}
+
+
+Views/Product/Index.cshtml
+
+додаємо посилання на створення нового продукта
+
+<th>
+            <a asp-action="Create" asp-controller="Product" style="color: white">
+                <i class="bi bi-plus-circle-dotted"></i>
+            </a>
+
+робим нову вьюшку
+
+
+
+
+
+Views/Product/Create.cshtml
+
+@model CreateProduct
+
+<h2 class="text-center">Додавання товару</h2>
+<div class="d-flex justify-content-center w-50 m-auto">
+    <form class="w-100 text-center bg-body-tertiary py-2 px-4"
+          method="post"
+          asp-controller="Product"
+          asp-action="Create"
+          enctype="multipart/form-data"> \\що приймаємо саме файл
+        <div>
+            <label for="name" class="form-label mt-4">Назва</label>
+            <input type="text" class="form-control" id="name" name="name">
+            <small hidden class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div>
+            <label for="description" class="form-label mt-4">Опис</label>
+            <input type="text" class="form-control" id="description" name="description">
+            <small hidden class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div>
+            <label for="price" class="form-label mt-4">Ціна</label>
+            <input type="number" class="form-control" id="price" name="price">
+            <small hidden class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div>
+            <label for="amount" class="form-label mt-4">Кількість</label>
+            <input type="number" class="form-control" id="amount" name="amount">
+            <small hidden class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div>
+            <label for="color" class="form-label mt-4">Колір</label>
+            <input type="text" class="form-control" id="color" name="color">
+            <small hidden class="form-text text-muted">We'll never sh    are your email with anyone else.</small>
+        </div>
+        <div>
+            <label for="image" class="form-label mt-4">Зображення</label>
+            <input accept="image/*" type="file" class="form-control" id="image" name="image"> \\завантаження файлу, accept="image/* - хоче чисто зображення
+            <small hidden class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="text-center mt-3">
+            <input class="btn btn-success w-25" type="submit" value="Додати">
+            <a class="btn btn-dark w-25" asp-controller="Product" asp-action="Index">Назад</a>
+        </div>
+    </form>
+</div>
+
+
+створюємо PD411_Shop/ViewModels/ - це моделі для вьюшок, дані що нам має передати користувач
+Тому що айді юзер не передає, катогорію він не має вказувати, тільки айді категорії
+
+PD411_Shop/ViewModels/CreateProductVM.cs   - модель для створення товару
+
+
+using PD411_Shop.Models;
+
+namespace PD411_Shop.ViewModels
+{
+    public class CreateProductVM
+    {
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public double Price { get; set; }
+        public IFormFile? Image { get; set; } // формат для отримання имадж
+        public int Amount { get; set; }
+        public string? Color { get; set; }
+    }
+}
+
+PD411_Shop/Views/_ViewImports.cshtml   - це імпорти що бачать вьюшки
+
+@using PD411_Shop
+@using PD411_Shop.Models
+@using PD411_Shop.ViewModels   \\тепер бачить 
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+/Views/Product/Index.cshtml
+
+@model IEnumerable<ProductModel>
+
+<div class="text-center">
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>CreatedDate</th>
+                <th>Image</th>
+                <th>
+                    <a asp-action="Create" asp-controller="Product" style="color: white">
+                        <i class="bi bi-plus-circle-dotted"></i>
+                    </a>
+                </th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                    <td>@product.Color</td>
+                    <td>@product.CreatedDate.ToString("dd.MM.yyyy")</td>
+                    <td>
+                        @* ~  шлях до папки wwwroot *@
+                        <img height="100" src="~/images/@(product.Image ?? "default.jpg")" alt="@product.Name"> \\перевірка якщо зображення немає то дефолтна
+                    </td>
+                    <td>
+                        <a asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id">
+                            <i class="bi bi-trash-fill" style="color: red"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+ ~  шлях до папки wwwroot!!!
+ 
+ 
+Всім продуктам стираємо посилання на файл
+
+в SQL server
+
+UPDATE Products
+SET Image = null
+

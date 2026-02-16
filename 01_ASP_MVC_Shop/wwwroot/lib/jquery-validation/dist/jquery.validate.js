@@ -269,7 +269,7 @@ $.validator.format = function( source, params ) {
 		params = [ params ];
 	}
 	$.each( params, function( i, n ) {
-		source = source.replace( new RegExp( "\\{" + i + "\\}", "g" ), function() {
+		source = source.replace( new RegExp( "//{" + i + "//}", "g" ), function() {
 			return n;
 		} );
 	} );
@@ -738,7 +738,7 @@ $.extend( $.validator, {
 			if ( type === "file" ) {
 
 				// Modern browser (chrome & safari)
-				if ( val.substr( 0, 12 ) === "C:\\fakepath\\" ) {
+				if ( val.substr( 0, 12 ) === "C://fakepath//" ) {
 					return val.substr( 12 );
 				}
 
@@ -750,7 +750,7 @@ $.extend( $.validator, {
 				}
 
 				// Windows-based path
-				idx = val.lastIndexOf( "\\" );
+				idx = val.lastIndexOf( "//" );
 				if ( idx >= 0 ) {
 					return val.substr( idx + 1 );
 				}
@@ -1013,7 +1013,7 @@ $.extend( $.validator, {
 					// Respect existing non-error aria-describedby
 					if ( !describedBy ) {
 						describedBy = errorID;
-					} else if ( !describedBy.match( new RegExp( "\\b" + this.escapeCssMeta( errorID ) + "\\b" ) ) ) {
+					} else if ( !describedBy.match( new RegExp( "//b" + this.escapeCssMeta( errorID ) + "//b" ) ) ) {
 
 						// Add to end of list if not already present
 						describedBy += " " + errorID;
@@ -1068,7 +1068,7 @@ $.extend( $.validator, {
 				return "";
 			}
 
-			return string.replace( /([\\!"#$%&'()*+,./:;<=>?@\[\]^`{|}~])/g, "\\$1" );
+			return string.replace( /([//!"#$%&'()*+,./:;<=>?@\[\]^`{|}~])/g, "//$1" );
 		},
 
 		idOrName: function( element ) {
@@ -1549,7 +1549,7 @@ $.extend( $.validator, {
 			var type = $( element ).attr( "type" ),
 				errorMessage = "Step attribute on input type " + type + " is not supported.",
 				supportedTypes = [ "text", "number", "range" ],
-				re = new RegExp( "\\b" + type + "\\b" ),
+				re = new RegExp( "//b" + type + "//b" ),
 				notSupported = type && !re.test( supportedTypes.join() ),
 				decimalPlaces = function( num ) {
 					var match = ( "" + num ).match( /(?:\.(\d+))?$/ );
