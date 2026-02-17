@@ -1,13 +1,18 @@
-﻿@model IEnumerable<CategoryModel>
+﻿@using _01_ASP_MVC_Shop.Models
+@model IEnumerable<CategoryModel>
 
 <div class="text-center">
     <table class="table table-striped">
         <thead class="table-dark">
             <tr>
                 <th>Id</th>
-                <th>Name</th>           
+                <th>Name</th>
+                <th>
+                    <a asp-action="Create" asp-controller="Category" style="color: white">
+                        <i class="bi bi-plus-circle-dotted"></i>
+                    </a>
+                </th>
             </tr>
-
         </thead>
         <tbody>
             @foreach (var category in Model)
@@ -15,7 +20,15 @@
                 <tr>
                     <td>@category.Id</td>
                     <td>@category.Name</td>
+                    <td>
+                        <a asp-controller="Category" style="margin-right: 10px" asp-action="Update" asp-route-id="@category.Id">
+                            <i class="bi bi-pencil-square" style="color: blue"></i>
+                        </a>
 
+                        <a asp-controller="Category" asp-action="Delete" asp-route-id="@category.Id">
+                            <i class="bi bi-trash-fill" style="color: red"></i>
+                        </a>
+                    </td>
                 </tr>
             }
         </tbody>

@@ -11,10 +11,10 @@
 
         public decimal Price { get; set; }
 
-        // Нова колонка: кількість товару
+
         public int Quantity { get; set; }
 
-        // Нова колонка: час створення
+
         public DateTime CreatedAt { get; set; }
 
         public int CategoryId { get; set; }
