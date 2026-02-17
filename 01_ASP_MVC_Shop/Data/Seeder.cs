@@ -245,6 +245,15 @@ namespace _01_ASP_MVC_Shop.Data
                 new ProductModel{Id=id++,Name="Zyxel Armor G5",Brand="Zyxel",Price=8999,CategoryId=10,Image="10meregeve.png"},
             };
 
+            
+            var rand = new Random(12345);
+            DateTime createdAt = new DateTime(2026, 2, 17, 12, 0, 0);
+            foreach (var p in products)
+            {
+                p.Quantity = rand.Next(5, 21);
+                p.CreatedAt = createdAt;
+            }
+
             modelBuilder.Entity<ProductModel>().HasData(products);
         }
     }

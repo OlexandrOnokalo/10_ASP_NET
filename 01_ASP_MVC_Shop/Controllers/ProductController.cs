@@ -2,6 +2,7 @@
 using _01_ASP_MVC_Shop.Models;
 using _01_ASP_MVC_Shop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace _01_ASP_MVC_Shop.Controllers
@@ -15,26 +16,55 @@ namespace _01_ASP_MVC_Shop.Controllers
             _context = context;
         }
 
+        private async Task<IEnumerable<SelectListItem>> GetSelectCategoriesAsync()
+        {
+            List<CategoryModel> categories = await _context.Categories.ToListAsync();
+
+            IEnumerable<SelectListItem> selectItems = categories
+                .Select(c => new SelectListItem(c.Name, c.Id.ToString()));
+
+
+            // Приклад того самого коду без використання Select
+            //List<SelectListItem> result = new List<SelectListItem>();
+            //foreach (var c in categories)
+            //{
+            //    var item = new SelectListItem(c.Name, c.Id.ToString();
+            //    result.Add(item);
+            //}
+
+            return selectItems;
+        }
+
         public IActionResult Index()
         {
-            var products = _context.Products.AsEnumerable();
+            var products = _context.Products
+                .Include(p => p.Category)
+                .AsNoTracking()
+                .AsEnumerable();
+
             return View(products);
         }
 
 
         public async Task<IActionResult> Create()
         {
-            return View();
+            var viewModel = new CreateProductVM
+            {
+                SelectCategories = await GetSelectCategoriesAsync()
+            };
+
+            return View(viewModel);
         }
 
 
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] CreateProductVM vm)
         {
-            var category = _context.Categories.FirstOrDefault();
-            if (category == null)
+            
+            if (!ModelState.IsValid)
             {
-                return View();
+                vm.SelectCategories = await GetSelectCategoriesAsync();
+                return View(vm);
             }
 
             ProductModel model = new ProductModel
@@ -42,7 +72,10 @@ namespace _01_ASP_MVC_Shop.Controllers
                 Name = vm.Name ?? string.Empty,
                 Brand = vm.Brand,
                 Price = vm.Price,
-                Category = category
+                Quantity = vm.Quantity,
+                CreatedAt = vm.CreatedAt,
+                CategoryId = vm.CategoryId
+
             };
 
 
@@ -96,9 +129,9 @@ namespace _01_ASP_MVC_Shop.Controllers
         }
 
 
-        public IActionResult Update(int id)
+        public async Task<IActionResult> Update(int id)
         {
-            var product = _context.Products.FirstOrDefault(p => p.Id == id);
+            var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
 
             if (product == null)
             {
@@ -111,14 +144,20 @@ namespace _01_ASP_MVC_Shop.Controllers
                 Name = product.Name,
                 Brand = product.Brand,
                 Price = product.Price,
-                CurrentImage = product.Image
+                CurrentImage = product.Image,
+                SelectCategories = await GetSelectCategoriesAsync(),
+                CategoryId = product.CategoryId,
+                Quantity = product.Quantity,
+                CreatedAt = product.CreatedAt
             };
 
             return View(vm);
         }
 
-
+        // POST
+        // [FromForm] - очікує дані у форматі multipart/form-data
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Update([FromForm] ProductEditVM vm)
         {
             var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == vm.Id);
@@ -128,9 +167,15 @@ namespace _01_ASP_MVC_Shop.Controllers
                 return NotFound();
             }
 
+            vm.SelectCategories = await GetSelectCategoriesAsync();
+
+
             product.Name = vm.Name ?? string.Empty;
             product.Brand = vm.Brand;
             product.Price = vm.Price;
+            product.Quantity = vm.Quantity;
+            product.CategoryId = vm.CategoryId;
+
 
             if (vm.Image != null)
             {

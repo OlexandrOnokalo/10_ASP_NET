@@ -8073,3 +8073,112 @@ PD411_Shop/Views/_ViewImports.cshtml   - це імпорти що бачать �
 UPDATE Products
 SET Image = null
 
+
+========================================================
+04_ASP_MVC_Validation
+
+Валідація:
+
+/ViewModels/CreateProductVM.cs
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
+
+namespace PD411_Shop.ViewModels
+{
+    public class CreateProductVM
+    {
+        [Required(ErrorMessage = "Обов'язкове поле")]
+        [MaxLength(200, ErrorMessage = "Максимальна довжина 200 символів")]
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        [Required(ErrorMessage = "Потрібно вказати ціну")]
+        [Range(0, 99999999, ErrorMessage = "К-сть повинна бути в діапазоні 0 - 99999999")]
+        public double Price { get; set; } = 0d;
+        [Required(ErrorMessage = "Потрібно вказати кількість")]
+        [Range(0, 10000, ErrorMessage = "К-сть повинна бути в діапазоні 0 - 10000")]
+        public int Amount { get; set; } = 0;
+        [Required(ErrorMessage = "Обов'язкове поле")]
+        [MaxLength(100, ErrorMessage = "Максимальна довжина 100 символів")]
+        public string? Color { get; set; }
+        public IFormFile? Image { get; set; }
+        public int CategoryId { get; set; }
+        public IEnumerable<SelectListItem> SelectCategories { get; set; } = [];
+    }
+}
+
+
+сюди додаємо
+
+/Controllers/ProductController.cs
+
+
+
+		// POST
+        // [FromForm] - очікує дані у форматі multipart/form-data
+		
+        [HttpPost]
+        [ValidateAntiForgeryToken] //автоматичний запит від міжсайтової підробки запиту
+		
+        public async Task<IActionResult> Create([FromForm]CreateProductVM vm)
+        {
+            if(!ModelState.IsValid)
+            {
+                vm.SelectCategories = await GetSelectCategoriesAsync();
+                return View(vm);
+            }
+.........
+
+
+
+
+
+Views/Product/Create.cshtml
+
+Берем 
+        <div>
+            <label for="name" class="form-label mt-4">Назва</label>
+            <input type="text" class="form-control" id="name" name="name" asp-for="Name">
+            <small hidden class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+		
+		і small.. змінюємо, додаємо вивід повідомлень помилок
+		
+        <div>
+            <label for="name" class="form-label mt-2">Назва</label>
+            <input type="text" class="form-control" id="name" name="name" asp-for="Name" />
+            <div class="text-start ms-2" style="min-height: 24px;">
+                <span class="text-danger" style="font-size: 12px;" asp-validation-for="Name"></span>
+            </div>
+        </div>
+
+		
+
+
+
+
+
+
+
+додати кількість продукт, create, апдейт, сидер
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

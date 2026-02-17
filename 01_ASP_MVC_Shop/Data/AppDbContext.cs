@@ -43,6 +43,12 @@ namespace _01_ASP_MVC_Shop.Data
                 entity.Property(p => p.Price)
                       .HasColumnType("decimal(18,2)");
 
+                entity.Property(p => p.Quantity)
+                      .HasDefaultValue(0);
+
+                entity.Property(p => p.CreatedAt)
+                      .HasColumnType("datetime2");
+
                 entity.HasOne(p => p.Category)
                       .WithMany(c => c.Products)
                       .HasForeignKey(p => p.CategoryId)
