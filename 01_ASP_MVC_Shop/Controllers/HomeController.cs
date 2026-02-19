@@ -1,8 +1,9 @@
-using Microsoft.EntityFrameworkCore;
 using _01_ASP_MVC_Shop.Data;
-using _01_ASP_MVC_Shop.Repositories;
 using _01_ASP_MVC_Shop.Models;
+using _01_ASP_MVC_Shop.Repositories;
+using _01_ASP_MVC_Shop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace _01_ASP_MVC_Shop.Controllers
@@ -18,11 +19,35 @@ namespace _01_ASP_MVC_Shop.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? category, [FromQuery] PaginationVM pagination)
         {
-            IEnumerable<ProductModel> products = _context.Products.AsEnumerable();
+            IQueryable<CategoryModel> categories = _context.Categories;
+            IQueryable<ProductModel> products = _context.Products;
 
-            return View(products);
+            if (category != null && categories.Any(c => c.Id == category))
+            {
+                products = products.Where(p => p.CategoryId == category);
+            }
+
+            // Pagination
+            pagination.PageSize = pagination.PageSize < 1 ? 20 : pagination.PageSize;
+            pagination.PageCount = (int)Math.Ceiling((double)products.Count() / pagination.PageSize);
+            pagination.Page = pagination.Page < 1 || pagination.Page > pagination.PageCount ? 1 : pagination.Page;
+
+            products = products
+                .OrderBy(p => p.Id)
+                .Skip(pagination.PageSize * (pagination.Page - 1))
+                .Take(pagination.PageSize);
+
+            var homeVm = new HomeVM
+            {
+                Products = products,
+                Categories = categories,
+                Pagination = pagination,
+                CategoryId = category
+            };
+
+            return View(homeVm);
         }
 
         public IActionResult Privacy()

@@ -35,14 +35,35 @@ namespace _01_ASP_MVC_Shop.Controllers
             return selectItems;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? category)
         {
-            var products = _context.Products
-                .Include(p => p.Category)
-                .AsNoTracking()
-                .AsEnumerable();
+            List<CategoryModel> categories = _context.Categories.ToList();
+            IQueryable<ProductModel> products = _context.Products;
 
-            return View(products);
+            if (category != null && categories.Any(c => c.Id == category))
+            {
+                products = products.Where(p => p.CategoryId == category);
+            }
+
+            var homeVm = new HomeVM
+            {
+                Products = products,
+                Categories = categories
+            };
+
+            return View(homeVm);
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var product = await _context.Products
+                .Include(p => p.Category)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (product == null)
+                return NotFound();
+
+            return View(product);
         }
 
 
@@ -70,12 +91,11 @@ namespace _01_ASP_MVC_Shop.Controllers
             ProductModel model = new ProductModel
             {
                 Name = vm.Name ?? string.Empty,
-                Brand = vm.Brand,
                 Price = vm.Price,
-                Quantity = vm.Quantity,
-                CreatedAt = vm.CreatedAt,
+                Amount = vm.Amount,
+                Color = vm.Color,
+                CreatedDate = DateTime.UtcNow,
                 CategoryId = vm.CategoryId
-
             };
 
 
@@ -142,13 +162,12 @@ namespace _01_ASP_MVC_Shop.Controllers
             {
                 Id = product.Id,
                 Name = product.Name,
-                Brand = product.Brand,
+                Color = product.Color,
                 Price = product.Price,
                 CurrentImage = product.Image,
                 SelectCategories = await GetSelectCategoriesAsync(),
                 CategoryId = product.CategoryId,
-                Quantity = product.Quantity,
-                CreatedAt = product.CreatedAt
+                Amount = product.Amount
             };
 
             return View(vm);
@@ -171,9 +190,9 @@ namespace _01_ASP_MVC_Shop.Controllers
 
 
             product.Name = vm.Name ?? string.Empty;
-            product.Brand = vm.Brand;
+            product.Color = vm.Color;
             product.Price = vm.Price;
-            product.Quantity = vm.Quantity;
+            product.Amount = vm.Amount;
             product.CategoryId = vm.CategoryId;
 
 

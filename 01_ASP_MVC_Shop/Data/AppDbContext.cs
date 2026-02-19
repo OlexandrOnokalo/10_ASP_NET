@@ -13,57 +13,49 @@ namespace _01_ASP_MVC_Shop.Data
         public DbSet<CategoryModel> Categories { get; set; }
         public DbSet<ProductModel> Products { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<CategoryModel>(entity =>
+            // Category
+            builder.Entity<CategoryModel>(entity =>
             {
-                entity.ToTable("Categories");
-                entity.HasKey(c => c.Id);
+                entity.HasKey(e => e.Id);
 
-                entity.Property(c => c.Name)
-                      .IsRequired()
-                      .HasMaxLength(100);
+                entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(100);
             });
 
-            modelBuilder.Entity<ProductModel>(entity =>
+            // Product
+            builder.Entity<ProductModel>(entity =>
             {
-                entity.ToTable("Products");
-                entity.HasKey(p => p.Id);
+                entity.HasKey(e => e.Id);
 
-                entity.Property(p => p.Name)
-                      .IsRequired()
-                      .HasMaxLength(200);
+                entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(200);
 
-                entity.Property(p => p.Brand)
-                      .IsRequired()
-                      .HasMaxLength(100);
+                entity.Property(e => e.Image)
+                .HasMaxLength(255);
 
-                entity.Property(p => p.Price)
-                      .HasColumnType("decimal(18,2)");
+                entity.Property(e => e.Color)
+                .HasMaxLength(100);
 
-                entity.Property(p => p.Quantity)
-                      .HasDefaultValue(0);
-
-                entity.Property(p => p.CreatedAt)
-                      .HasColumnType("datetime2");
-
-                entity.HasOne(p => p.Category)
-                      .WithMany(c => c.Products)
-                      .HasForeignKey(p => p.CategoryId)
-                      .OnDelete(DeleteBehavior.Cascade);
+                entity.Property(e => e.Description)
+                .HasColumnType("ntext");
             });
 
             // Relationships
             // Category one to many Products
-            modelBuilder.Entity<ProductModel>()
+            builder.Entity<ProductModel>()
                 .HasOne(p => p.Category)
                 .WithMany(c => c.Products)
                 .HasForeignKey(p => p.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            Seeder.Seed(modelBuilder);
+            // Seed data
+            Seeder.Seed(builder);
+
+            base.OnModelCreating(builder);
         }
     }
 }

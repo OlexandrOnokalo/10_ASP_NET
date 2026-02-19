@@ -1,10 +1,12 @@
-﻿namespace _01_ASP_MVC_Shop.Models
+﻿using System.Collections.Generic;
+
+namespace _01_ASP_MVC_Shop.Models
 {
     public class CategoryModel
     {
         public int Id { get; set; }
         public required string Name { get; set; }
 
-        public ICollection<ProductModel> Products { get; set; } = [];
+        public ICollection<ProductModel> Products { get; set; } = new List<ProductModel>();
     }
 }

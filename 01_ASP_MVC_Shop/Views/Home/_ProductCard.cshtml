@@ -1,0 +1,17 @@
+﻿@model ProductModel
+
+<div class="card col-3" style="width: 18rem; @(Model.Amount == 0 ? "opacity:0.5; position:relative;" : "")">
+    <img height="300" width="250" style="object-fit: contain;" class="card-img-top" src="~/images/@(Model.Image ?? "default.jpg")" alt="@Model.Name">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        @if (Model.Amount == 0)
+        {
+            <h4 class="text-muted">Немає в наявності</h4>
+        }
+        else
+        {
+            <h4>$@Model.Price</h4>
+        }
+        <a href="@Url.Action("Details", "Product", new { id = Model.Id })" class="stretched-link"></a>
+    </div>
+</div>

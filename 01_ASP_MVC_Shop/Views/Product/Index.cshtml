@@ -27,11 +27,11 @@
                 <tr>
                     <td>@product.Id</td>
                     <td>@product.Name</td>
-                    <td>@product.Brand</td>
-                    <td>@product.Quantity</td>
+                    <td>@product.Color</td>
+                    <td>@product.Amount</td>
                     <td>@product.Price</td>
                     <td>@product.Category!.Name</td>
-                    <td>@product.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>@product.CreatedDate.ToString("yyyy-MM-dd HH:mm")</td>
                     <td>
                         @* ~  шлях до папки wwwroot *@
                         <img height="50" class="image-scale" src="~/images/@(product.Image ?? "default.jpg")" alt="@product.Name">

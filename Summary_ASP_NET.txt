@@ -8159,16 +8159,147 @@ Views/Product/Create.cshtml
 
 робимо головну сторінку, вона буде каталог товарів, а теперішня закладка з товарами буде як адмінка 
 
-створюємо HomeVN 
-зміни в купі місць ((
+
+/Controllers/HomeController.cs‎
+
+        public IActionResult Index(int? category)
+        {
+            List<CategoryModel> categories = _context.Categories.ToList();
+            IQueryable<ProductModel> products = _context.Products;
+
+            if (category != null && categories.Any(c => c.Id == category))
+            {
+                products = products.Where(p => p.CategoryId == category);
+            }
+
+            var homeVm = new HomeVM
+            {
+                Products = products,
+                Categories = categories
+            };
+
+            return View(homeVm);
+        }
+
+створюємо /ViewModels/HomeVM.cs
+
+using PD411_Shop.Models;
+
+namespace PD411_Shop.ViewModels
+{
+    public class HomeVM
+    {
+        public IEnumerable<ProductModel> Products { get; set; } = [];
+        public IEnumerable<CategoryModel> Categories { get; set; } = [];
+    }
+}
 
 
-При натискані категорій, треба щоб виводились товари категорії
+вносимо змыни до Views/Home/Index.cshtml
+
+@model HomeVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="d-flex">
+    <aside class="flex-grow-0 p-5 border-end text-nowrap">
+        @foreach (var category in Model.Categories)
+        {
+            <a asp-action="Index" asp-route-category="@category.Id" class="d-block mb-2 side-link">
+                @category.Name
+            </a>
+        }
+    </aside>
+
+    <main class="flex-grow-1 p-5">
+        <div class="row gap-2 mx-auto">
+            @foreach (var product in Model.Products)
+
+
+
+Views/Home/_ProductCard.cshtml
+
+@model ProductModel
+
+<div class="card col-3" style="width: 18rem;">
+    <img height="300" width="250" style="object-fit: contain;" class="card-img-top" src="~/images/@(Model.Image ?? "default.jpg")" alt="@Model.Name">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <h4>$@Model.Price</h4>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+
 
 пагінація
 
-PaginationVM
 
+Controllers/HomeController.cs
+
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context;
+
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
+        {
+            _logger = logger;
+            _context = context;
+        }
+
+        public IActionResult Index(int? category, [FromQuery] PaginationVM pagination)
+        {
+            IQueryable<CategoryModel> categories = _context.Categories;
+            IQueryable<ProductModel> products = _context.Products;
+
+            if (category != null && categories.Any(c => c.Id == category))
+            {
+                products = products.Where(p => p.CategoryId == category);
+            }
+
+            // Pagination
+            pagination.PageSize = pagination.PageSize < 1 ? 20 : pagination.PageSize;
+            pagination.PageCount = (int)Math.Ceiling((double)products.Count() / pagination.PageSize);
+            pagination.Page = pagination.Page < 1 || pagination.Page > pagination.PageCount ? 1 : pagination.Page;
+
+            products = products
+                .OrderBy(p => p.Id)
+                .Skip(pagination.PageSize * (pagination.Page - 1))
+                .Take(pagination.PageSize);
+
+            var homeVm = new HomeVM
+            {
+                Products = products,
+                Categories = categories,
+                Pagination = pagination,
+                CategoryId = category
+            };
+
+            return View(homeVm);
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult AboutUs()
+        {
+            return View(); 
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+	
+	
+	Models/ProductModel.cs
+	
+	
 
 
 

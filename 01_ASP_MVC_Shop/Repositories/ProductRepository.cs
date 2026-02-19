@@ -6,11 +6,11 @@ using _01_ASP_MVC_Shop.Models;
 
 namespace _01_ASP_MVC_Shop.Repositories
 {
-    public class ProductRepostitory
+    public class ProductRepository
     {
         private readonly AppDbContext _context;
 
-        public ProductRepostitory(AppDbContext context)
+        public ProductRepository(AppDbContext context)
         {
             _context = context;
         }
