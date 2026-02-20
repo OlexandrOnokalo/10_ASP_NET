@@ -8300,13 +8300,60 @@ Controllers/HomeController.cs
 	Models/ProductModel.cs
 	
 	
+========================================================
+06_ASP_MVC_Identity
+
+Робимо логінку
+
+Ідентифікація визначає користувача (логін), 
+автентифікація підтверджує справжність (пароль), 
+а авторизація надає права на дії.
+
+NuGet:
+
+microsoft.aspnetcore.identity.entityframeworkCore
+microsoft.AspNetCore.Identity.UI
+
+
+підключаємо в проект
+
+appDbContext.cs
+
+    public class AppDbContext : DbContext міняємо на 
+	
+	public class AppDbContext : IdentutyDbContext<UserModel> 
+	//додаємо ще модель з додатковими полями
+
+
+Programs.cs
+
+дописуємо
+//identitybuilder.servi...???????????
 
 
 
+app.UseAuthentica???
+app.Use????
 
+робимо міграцію, додались нові 7 таблиць
 
+AspNetUsers вся інфа про користувачам
+решта ще роль, токени і тд
 
+Щоб додати в таблицю ще інформацію про користувача
 
+models\UserModel.cs
+?????????????????????????? успадковуємо ту таблицю
+і додаємо нові поля
+
+також можем переробити якесь поле 
+
+ще раз робимо міграцію бо додали нові поля
+
+щоб працювати з користувачами і ролями 
+ми додаємо нові класи 
+
+seeder треба повністю переробляти
 
 
 
