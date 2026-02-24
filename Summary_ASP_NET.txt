@@ -8328,12 +8328,25 @@ appDbContext.cs
 Programs.cs
 
 дописуємо
-//identitybuilder.servi...???????????
+// Add Identity
+builder.Services.AddIdentity<UserModel, IdentityRole>(options =>
+{
+    options.User.RequireUniqueEmail = true;
+
+    options.Password.RequiredLength = 6;
+    options.Password.RequireDigit = false;  // все false для тестування
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireLowercase = false;
+})
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders()
+    .AddDefaultUI();
 
 
 
-app.UseAuthentica???
-app.Use????
+app.UseAuthentication();
+app.UseAuthorization();
 
 робимо міграцію, додались нові 7 таблиць
 

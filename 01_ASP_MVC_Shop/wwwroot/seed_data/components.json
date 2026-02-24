@@ -1,0 +1,1652 @@
+[
+  {
+    "Name": "Ноутбуки",
+    "Products": [
+      {
+        "Name": "Dell XPS 13 9315",
+        "Description": "Компактний 13\\",
+        "Price": 1299.99,
+        "Image": "01noutbuki.png",
+        "Amount": 12,
+        "Color": "Silver"
+      },
+      {
+        "Name": "Apple MacBook Air M2 13\\",
+        "Description": "MacBook Air на M2 — тонкий та легкий, чудова автономність, 8-ядерний процесор та Retina дисплей.",
+        "Price": 1199.0,
+        "Image": "01noutbuki.png",
+        "Amount": 0,
+        "Color": "Space Gray"
+      },
+      {
+        "Name": "Lenovo ThinkPad X1 Carbon Gen 11",
+        "Description": "Преміальний бізнес-ноутбук з якісною клавіатурою, 14\\",
+        "Price": 1499.5,
+        "Image": "01noutbuki.png",
+        "Amount": 6,
+        "Color": "Black"
+      },
+      {
+        "Name": "HP Spectre x360 14",
+        "Description": "Конвертований 2-в-1 ноутбук з сенсорним OLED-екраном, ідеальний для творчих задач.",
+        "Price": 1099.99,
+        "Image": "01noutbuki.png",
+        "Amount": 10,
+        "Color": "Nightfall Black"
+      },
+      {
+        "Name": "Asus ROG Zephyrus G14",
+        "Description": "Ігровий ноутбук 14\\",
+        "Price": 1599.0,
+        "Image": "01noutbuki.png",
+        "Amount": 7,
+        "Color": "Moonlight White"
+      },
+      {
+        "Name": "Acer Swift 3 (SF314)",
+        "Description": "Легкий 14\\",
+        "Price": 699.99,
+        "Image": "01noutbuki.png",
+        "Amount": 15,
+        "Color": "Silver"
+      },
+      {
+        "Name": "MSI Prestige 14",
+        "Description": "Ноутбук для креаторів: тонкий корпус, потужний процесор та якісна матриця дисплея.",
+        "Price": 1249.0,
+        "Image": "01noutbuki.png",
+        "Amount": 9,
+        "Color": "Carbon Gray"
+      },
+      {
+        "Name": "Huawei MateBook D 15",
+        "Description": "15\\",
+        "Price": 549.99,
+        "Image": "01noutbuki.png",
+        "Amount": 14,
+        "Color": "Mystic Silver"
+      },
+      {
+        "Name": "Razer Blade 15",
+        "Description": "Преміум ігровий ноутбук з високою частотою оновлення дисплея та потужною графікою.",
+        "Price": 2199.0,
+        "Image": "01noutbuki.png",
+        "Amount": 5,
+        "Color": "Black"
+      },
+      {
+        "Name": "Samsung Galaxy Book3 Pro 15\\",
+        "Description": "Тонкий 15\\",
+        "Price": 1399.0,
+        "Image": "01noutbuki.png",
+        "Amount": 11,
+        "Color": "Burgundy"
+      },
+      {
+        "Name": "LG Gram 16",
+        "Description": "Вкрай легкий 16\\",
+        "Price": 1699.0,
+        "Image": "01noutbuki.png",
+        "Amount": 6,
+        "Color": "White"
+      },
+      {
+        "Name": "Microsoft Surface Laptop 5",
+        "Description": "Елегантний ноутбук з якісним дисплеєм PixelSense та комфортною клавіатурою.",
+        "Price": 1149.0,
+        "Image": "01noutbuki.png",
+        "Amount": 9,
+        "Color": "Platinum"
+      },
+      {
+        "Name": "Dell Inspiron 16 Plus",
+        "Description": "Потужний універсальний ноутбук з 16\\",
+        "Price": 1299.0,
+        "Image": "01noutbuki.png",
+        "Amount": 10,
+        "Color": "Grey"
+      },
+      {
+        "Name": "HP Omen 16",
+        "Description": "Ігрова серія OMEN: 16\\",
+        "Price": 1399.99,
+        "Image": "01noutbuki.png",
+        "Amount": 8,
+        "Color": "Black"
+      },
+      {
+        "Name": "Acer Predator Helios 300",
+        "Description": "Популярний ігровий ноутбук з хорошим співвідношенням ціни та FPS.",
+        "Price": 1199.0,
+        "Image": "01noutbuki.png",
+        "Amount": 13,
+        "Color": "Black"
+      },
+      {
+        "Name": "Lenovo Legion 5 Pro",
+        "Description": "Ігрова серія Legion з якісним екраном і потужним CPU/GPU.",
+        "Price": 1299.0,
+        "Image": "01noutbuki.png",
+        "Amount": 12,
+        "Color": "Storm Grey"
+      },
+      {
+        "Name": "Asus ZenBook 14 OLED",
+        "Description": "Стильний ультрабук з OLED-дисплеєм, тонким корпусом та тривалим часом роботи.",
+        "Price": 999.99,
+        "Image": "01noutbuki.png",
+        "Amount": 10,
+        "Color": "Pine Grey"
+      },
+      {
+        "Name": "Huawei MateBook X Pro",
+        "Description": "Преміум 13.9\\",
+        "Price": 1399.0,
+        "Image": "01noutbuki.png",
+        "Amount": 7,
+        "Color": "Space Gray"
+      },
+      {
+        "Name": "Acer Chromebook Spin 713",
+        "Description": "Chromebook з довгою автономністю і продуктивністю для задач у ChromeOS.",
+        "Price": 649.99,
+        "Image": "01noutbuki.png",
+        "Amount": 16,
+        "Color": "Steel Gray"
+      },
+      {
+        "Name": "HP EliteBook 840 G9",
+        "Description": "Бізнес-ноутбук з корпоративними фічами, безпекою та надійною збіркою.",
+        "Price": 1199.0,
+        "Image": "01noutbuki.png",
+        "Amount": 9,
+        "Color": "Silver"
+      }
+    ]
+  },
+  {
+    "Name": "Настільні ПК",
+    "Products": [
+      {
+        "Name": "Dell OptiPlex 7000 Tower",
+        "Description": "Надійний бізнес-десктоп для офісних завдань з можливістю апгрейду.",
+        "Price": 999.99,
+        "Image": "02kompyutery.png",
+        "Amount": 10,
+        "Color": "Black"
+      },
+      {
+        "Name": "HP Pavilion Gaming Desktop TG01",
+        "Description": "Ігровий десктоп початкового/середнього рівня з дискретною графікою.",
+        "Price": 849.0,
+        "Image": "02kompyutery.png",
+        "Amount": 0,
+        "Color": "Black"
+      },
+      {
+        "Name": "Lenovo ThinkCentre M70s",
+        "Description": "Компактний офісний ПК з достатньою потужністю для бізнес-додатків.",
+        "Price": 749.99,
+        "Image": "02kompyutery.png",
+        "Amount": 14,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASUS ROG Strix GT15",
+        "Description": "Потужна ігрова станція від ROG з сучасним процесором і GPU.",
+        "Price": 1599.99,
+        "Image": "02kompyutery.png",
+        "Amount": 6,
+        "Color": "Black"
+      },
+      {
+        "Name": "Apple Mac Mini (M2)",
+        "Description": "Компактний десктоп з чіпом Apple M2 — ефективний для продуктивної роботи.",
+        "Price": 599.0,
+        "Image": "02kompyutery.png",
+        "Amount": 11,
+        "Color": "Silver"
+      },
+      {
+        "Name": "Acer Aspire TC",
+        "Description": "Універсальний настільний ПК для дому та навчання з хорошим співвідношенням ціни.",
+        "Price": 499.99,
+        "Image": "02kompyutery.png",
+        "Amount": 15,
+        "Color": "Black"
+      },
+      {
+        "Name": "MSI Infinite S",
+        "Description": "Ігровий ПК середнього класу з фокусом на продуктивність та охолодження.",
+        "Price": 1299.0,
+        "Image": "02kompyutery.png",
+        "Amount": 8,
+        "Color": "Black"
+      },
+      {
+        "Name": "Corsair One i300",
+        "Description": "Преміум компактна ігрова станція з топовими комплектуючими.",
+        "Price": 2999.0,
+        "Image": "02kompyutery.png",
+        "Amount": 5,
+        "Color": "Black"
+      },
+      {
+        "Name": "HP EliteDesk 800 G9",
+        "Description": "Корпоративний ПК з можливістю управління та стійкою роботою.",
+        "Price": 1199.0,
+        "Image": "02kompyutery.png",
+        "Amount": 9,
+        "Color": "Silver"
+      },
+      {
+        "Name": "Dell XPS Desktop 8950",
+        "Description": "Потужний десктоп для створення контенту та ігор.",
+        "Price": 1399.0,
+        "Image": "02kompyutery.png",
+        "Amount": 7,
+        "Color": "White"
+      },
+      {
+        "Name": "Lenovo Legion Tower 5",
+        "Description": "Ігровий корпус з можливістю апгрейду GPU та охолодження.",
+        "Price": 1099.99,
+        "Image": "02kompyutery.png",
+        "Amount": 8,
+        "Color": "Iron Grey"
+      },
+      {
+        "Name": "CyberPowerPC Gamer Xtreme",
+        "Description": "Готовий ігровий ПК з добрим співвідношенням ціна/продуктивність.",
+        "Price": 899.99,
+        "Image": "02kompyutery.png",
+        "Amount": 13,
+        "Color": "Black/Red"
+      },
+      {
+        "Name": "Apple iMac 24\\",
+        "Description": "Моноблок Apple з M1 — стильний дизайн та висока продуктивність.",
+        "Price": 1299.0,
+        "Image": "02kompyutery.png",
+        "Amount": 6,
+        "Color": "Blue"
+      },
+      {
+        "Name": "HP Z2 Tower G8",
+        "Description": "Робоча станція для професійних застосунків CAD/3D.",
+        "Price": 1499.0,
+        "Image": "02kompyutery.png",
+        "Amount": 5,
+        "Color": "Black"
+      },
+      {
+        "Name": "Dell Precision 3650 Tower",
+        "Description": "Серія Precision — націлена на професіоналів із ресурсом потужності для рендеру.",
+        "Price": 1799.0,
+        "Image": "02kompyutery.png",
+        "Amount": 4,
+        "Color": "Black"
+      },
+      {
+        "Name": "Lenovo IdeaCentre 5",
+        "Description": "Домашній ПК з комфортною продуктивністю для мультимедіа та офісу.",
+        "Price": 599.99,
+        "Image": "02kompyutery.png",
+        "Amount": 14,
+        "Color": "Gray"
+      },
+      {
+        "Name": "ASUS ProArt PA90",
+        "Description": "Станція для творців контенту з сертифікаціями для професійних додатків.",
+        "Price": 2399.0,
+        "Image": "02kompyutery.png",
+        "Amount": 3,
+        "Color": "Black"
+      },
+      {
+        "Name": "MSI Codex R",
+        "Description": "Розбалансований ігровий ПК для геймерів середнього сегмента.",
+        "Price": 999.99,
+        "Image": "02kompyutery.png",
+        "Amount": 10,
+        "Color": "Gunmetal"
+      },
+      {
+        "Name": "Alienware Aurora R15",
+        "Description": "Преміум-ігрова платформа з топовими компонентами і яскравим дизайном.",
+        "Price": 2199.0,
+        "Image": "02kompyutery.png",
+        "Amount": 5,
+        "Color": "Dark Side of the Moon"
+      },
+      {
+        "Name": "ASRock DeskMini X300",
+        "Description": "Міні-ПК формфактора small-form для компактних робочих місць.",
+        "Price": 399.99,
+        "Image": "02kompyutery.png",
+        "Amount": 18,
+        "Color": "Black"
+      }
+    ]
+  },
+  {
+    "Name": "Монітори",
+    "Products": [
+      {
+        "Name": "Dell UltraSharp U2723QE 27\\",
+        "Description": "27\\",
+        "Price": 699.99,
+        "Image": "03monitory.png",
+        "Amount": 9,
+        "Color": "Black"
+      },
+      {
+        "Name": "LG UltraGear 27GN950-B 27\\",
+        "Description": "27\\",
+        "Price": 599.99,
+        "Image": "03monitory.png",
+        "Amount": 0,
+        "Color": "Black"
+      },
+      {
+        "Name": "Samsung Odyssey G7 32\\",
+        "Description": "32\\",
+        "Price": 699.0,
+        "Image": "03monitory.png",
+        "Amount": 7,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASUS ProArt PA32UCX 32\\",
+        "Description": "Професійний 32\\",
+        "Price": 2499.99,
+        "Image": "03monitory.png",
+        "Amount": 3,
+        "Color": "Black"
+      },
+      {
+        "Name": "BenQ PD2725U 27\\",
+        "Description": "27\\",
+        "Price": 799.99,
+        "Image": "03monitory.png",
+        "Amount": 6,
+        "Color": "Black"
+      },
+      {
+        "Name": "Acer Predator X27 27\\",
+        "Description": "Преміум 4K ігровий монітор з G-Sync та яскравим HDR.",
+        "Price": 1599.0,
+        "Image": "03monitory.png",
+        "Amount": 4,
+        "Color": "Black"
+      },
+      {
+        "Name": "Philips 272E1CA 27\\",
+        "Description": "27\\",
+        "Price": 249.99,
+        "Image": "03monitory.png",
+        "Amount": 16,
+        "Color": "Black"
+      },
+      {
+        "Name": "ViewSonic VP2785-4K",
+        "Description": "Професійний 27\\",
+        "Price": 1299.0,
+        "Image": "03monitory.png",
+        "Amount": 5,
+        "Color": "Black"
+      },
+      {
+        "Name": "Samsung S27A800U 27\\",
+        "Description": "27\\",
+        "Price": 499.99,
+        "Image": "03monitory.png",
+        "Amount": 10,
+        "Color": "White"
+      },
+      {
+        "Name": "AOC Agon AG273QZ 27\\",
+        "Description": "27\\",
+        "Price": 399.99,
+        "Image": "03monitory.png",
+        "Amount": 12,
+        "Color": "Black"
+      },
+      {
+        "Name": "HP Z24n G3 24\\",
+        "Description": "24\\",
+        "Price": 299.99,
+        "Image": "03monitory.png",
+        "Amount": 14,
+        "Color": "Gray"
+      },
+      {
+        "Name": "Dell S2721DGF 27\\",
+        "Description": "27\\",
+        "Price": 379.99,
+        "Image": "03monitory.png",
+        "Amount": 13,
+        "Color": "Black"
+      },
+      {
+        "Name": "LG 34WN80C-B 34\\",
+        "Description": "34\\",
+        "Price": 649.99,
+        "Image": "03monitory.png",
+        "Amount": 7,
+        "Color": "Black"
+      },
+      {
+        "Name": "BenQ EX2780Q 27\\",
+        "Description": "27\\",
+        "Price": 499.99,
+        "Image": "03monitory.png",
+        "Amount": 9,
+        "Color": "Black"
+      },
+      {
+        "Name": "Philips 346B1C 34\\",
+        "Description": "34\\",
+        "Price": 449.99,
+        "Image": "03monitory.png",
+        "Amount": 8,
+        "Color": "Black"
+      },
+      {
+        "Name": "Samsung Odyssey Neo G9 49\\",
+        "Description": "49\\",
+        "Price": 1799.99,
+        "Image": "03monitory.png",
+        "Amount": 2,
+        "Color": "Black"
+      },
+      {
+        "Name": "Acer Nitro VG240Y 24\\",
+        "Description": "Доступний 24\\",
+        "Price": 159.99,
+        "Image": "03monitory.png",
+        "Amount": 17,
+        "Color": "Black"
+      },
+      {
+        "Name": "ViewSonic VX3276-2K-MHD",
+        "Description": "31.5\\",
+        "Price": 219.99,
+        "Image": "03monitory.png",
+        "Amount": 15,
+        "Color": "Silver"
+      },
+      {
+        "Name": "LG 27GL850-B 27\\",
+        "Description": "27\\",
+        "Price": 349.99,
+        "Image": "03monitory.png",
+        "Amount": 11,
+        "Color": "Black"
+      },
+      {
+        "Name": "BenQ GW2780 27\\",
+        "Description": "Універсальний 27\\",
+        "Price": 179.99,
+        "Image": "03monitory.png",
+        "Amount": 18,
+        "Color": "Black"
+      }
+    ]
+  },
+  {
+    "Name": "Відеокарти",
+    "Products": [
+      {
+        "Name": "NVIDIA GeForce RTX 4090 Founders",
+        "Description": "Флагманська відеокарта для 4K геймінгу та важких графічних задач.",
+        "Price": 1999.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 5,
+        "Color": "Black"
+      },
+      {
+        "Name": "NVIDIA GeForce RTX 4080",
+        "Description": "Висока продуктивність у 4K та трасування променів.",
+        "Price": 1199.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 0,
+        "Color": "Black"
+      },
+      {
+        "Name": "NVIDIA GeForce RTX 4070 Ti",
+        "Description": "Відмінний вибір для високих налаштувань в 1440p.",
+        "Price": 799.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 10,
+        "Color": "Black"
+      },
+      {
+        "Name": "AMD Radeon RX 7900 XTX",
+        "Description": "Флагман AMD для геймінгу з великим обсягом пам'яті.",
+        "Price": 999.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 7,
+        "Color": "Black"
+      },
+      {
+        "Name": "AMD Radeon RX 7800 XT",
+        "Description": "Сильна альтернатива для 1440p геймінгу.",
+        "Price": 599.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 9,
+        "Color": "Black"
+      },
+      {
+        "Name": "NVIDIA GeForce RTX 4060 Ti",
+        "Description": "Середній клас з хорошою енергоефективністю для 1080/1440p.",
+        "Price": 399.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 14,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASUS TUF Gaming RTX 4070",
+        "Description": "Кулер і система живлення від ASUS для стабільності під навантаженням.",
+        "Price": 799.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 8,
+        "Color": "Black"
+      },
+      {
+        "Name": "MSI Suprim X RTX 4090",
+        "Description": "Преміум кастомна RTX 4090 з заводським розгоном.",
+        "Price": 2199.0,
+        "Image": "04videocarty.jpg",
+        "Amount": 3,
+        "Color": "Silver/Black"
+      },
+      {
+        "Name": "Gigabyte Eagle RX 7900 XT",
+        "Description": "Надійна плата AMD із хорошою системою охолодження.",
+        "Price": 899.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 11,
+        "Color": "Black"
+      },
+      {
+        "Name": "Sapphire Nitro+ RX 6800 XT",
+        "Description": "Популярна модель для 1440p/4K продуктивності.",
+        "Price": 679.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 10,
+        "Color": "Black"
+      },
+      {
+        "Name": "ZOTAC GAMING GeForce RTX 3080 Ti",
+        "Description": "Серія ZOTAC з компактною системою охолодження та хорошим розгоном.",
+        "Price": 1199.0,
+        "Image": "04videocarty.jpg",
+        "Amount": 4,
+        "Color": "Black"
+      },
+      {
+        "Name": "PNY GeForce RTX 3060",
+        "Description": "Економічна відеокарта для 1080p ігрових налаштувань.",
+        "Price": 329.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 16,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASRock Radeon RX 6700 XT",
+        "Description": "Стабільна карта для середнього сегмента.",
+        "Price": 499.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 13,
+        "Color": "Black"
+      },
+      {
+        "Name": "EVGA GeForce GTX 1660 Super",
+        "Description": "Базова карта для бюджетних систем і кіберспорту.",
+        "Price": 229.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 18,
+        "Color": "Black"
+      },
+      {
+        "Name": "Gigabyte Aorus RTX 3090",
+        "Description": "Потужна карта з великим об'ємом пам'яті для рендеру.",
+        "Price": 1599.0,
+        "Image": "04videocarty.jpg",
+        "Amount": 2,
+        "Color": "Black"
+      },
+      {
+        "Name": "Palit GamingPro RTX 3070",
+        "Description": "Популярний варіант RTX 3070 для гравців середнього класу.",
+        "Price": 499.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 12,
+        "Color": "Black"
+      },
+      {
+        "Name": "PowerColor Red Devil RX 6900 XT",
+        "Description": "Висока продуктивність від AMD з агресивним дизайном.",
+        "Price": 899.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 5,
+        "Color": "Black/Red"
+      },
+      {
+        "Name": "MSI Ventus GTX 1650",
+        "Description": "Бюджетна карта для невимогливих ігор і мультимедіа.",
+        "Price": 149.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 20,
+        "Color": "Black"
+      },
+      {
+        "Name": "NVIDIA Quadro RTX 4000 (для робочих станцій)",
+        "Description": "Професійна плата для CAD/3D та GPU-акселерації.",
+        "Price": 899.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 3,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASUS ROG Strix LC RTX 3080",
+        "Description": "Рідинне охолодження для стабільної продуктивності при високих навантаженнях.",
+        "Price": 1399.99,
+        "Image": "04videocarty.jpg",
+        "Amount": 4,
+        "Color": "Black"
+      }
+    ]
+  },
+  {
+    "Name": "Процесори",
+    "Products": [
+      {
+        "Name": "Intel Core i9-13900K",
+        "Description": "Топовий десктопний процесор Intel для ігор та контенту.",
+        "Price": 589.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 7,
+        "Color": "Silver"
+      },
+      {
+        "Name": "AMD Ryzen 9 7950X",
+        "Description": "Флагман AMD для багатопотокових задач і створення контенту.",
+        "Price": 699.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 0,
+        "Color": "Black"
+      },
+      {
+        "Name": "Intel Core i7-13700K",
+        "Description": "Висока продуктивність у іграх та щоденних завданнях.",
+        "Price": 399.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 10,
+        "Color": "Silver"
+      },
+      {
+        "Name": "AMD Ryzen 7 7700X",
+        "Description": "Відмінний вибір для ігрових та потокових систем.",
+        "Price": 329.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 12,
+        "Color": "Black"
+      },
+      {
+        "Name": "Intel Core i5-13600K",
+        "Description": "Баланс продуктивності та ціни для геймерів.",
+        "Price": 269.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 14,
+        "Color": "Silver"
+      },
+      {
+        "Name": "AMD Ryzen 5 7600X",
+        "Description": "Оптимальний вибір для 1080/1440p геймерів.",
+        "Price": 229.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 16,
+        "Color": "Black"
+      },
+      {
+        "Name": "Intel Core i3-13100",
+        "Description": "Бюджетний процесор для офісних та побутових ПК.",
+        "Price": 119.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 18,
+        "Color": "Silver"
+      },
+      {
+        "Name": "AMD Ryzen Threadripper Pro 3975WX",
+        "Description": "Процесор робочої станції для серйозних рендер-задач.",
+        "Price": 2499.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 2,
+        "Color": "Black"
+      },
+      {
+        "Name": "Intel Xeon W-2295",
+        "Description": "Серверний/робочий процесор для професійних робочих навантажень.",
+        "Price": 1899.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 3,
+        "Color": "Silver"
+      },
+      {
+        "Name": "AMD Ryzen 5 5600X",
+        "Description": "Надійний шестиядерний процесор для геймерів та домашніх ПК.",
+        "Price": 199.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 20,
+        "Color": "Black"
+      },
+      {
+        "Name": "Intel Core i9-12900K",
+        "Description": "Попереднє покоління флагмана Intel зі сильною одноядерною продуктивністю.",
+        "Price": 499.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 5,
+        "Color": "Silver"
+      },
+      {
+        "Name": "AMD Ryzen 7 5800X",
+        "Description": "Висока продуктивність у багатопотокових задачах для робочих станцій та ігор.",
+        "Price": 279.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 9,
+        "Color": "Black"
+      },
+      {
+        "Name": "Intel Pentium Gold G6400",
+        "Description": "Доступний процесор для простих офісних задач.",
+        "Price": 79.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 19,
+        "Color": "Silver"
+      },
+      {
+        "Name": "AMD Athlon 3000G",
+        "Description": "Бюджетний APU з інтегрованою графікою для економних збірок.",
+        "Price": 59.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 20,
+        "Color": "Black"
+      },
+      {
+        "Name": "Intel Core i5-12600K",
+        "Description": "Високий показник продуктивності для геймерів середнього класу.",
+        "Price": 249.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 13,
+        "Color": "Silver"
+      },
+      {
+        "Name": "AMD Ryzen 3 3300X",
+        "Description": "Чотириядерний процесор для бюджетних ігрових систем.",
+        "Price": 129.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 11,
+        "Color": "Black"
+      },
+      {
+        "Name": "Intel Core i7-12700",
+        "Description": "Стабільний варіант для багатозадачності та ігор.",
+        "Price": 339.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 8,
+        "Color": "Silver"
+      },
+      {
+        "Name": "AMD Ryzen 9 5900X",
+        "Description": "Високопродуктивний 12-ядерний процесор для складних задач.",
+        "Price": 449.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 7,
+        "Color": "Black"
+      },
+      {
+        "Name": "Intel Core i5-12400F",
+        "Description": "Доступний і ефективний чип для ігор без вбудованої графіки.",
+        "Price": 179.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 17,
+        "Color": "Silver"
+      },
+      {
+        "Name": "AMD Ryzen 7 2700X",
+        "Description": "Попередня генерація Ryzen, все ще актуальна для багатьох задач.",
+        "Price": 199.99,
+        "Image": "05prozesory.jpg",
+        "Amount": 10,
+        "Color": "Black"
+      }
+    ]
+  },
+  {
+    "Name": "Материнські плати",
+    "Products": [
+      {
+        "Name": "ASUS ROG Strix Z790-E",
+        "Description": "Материнська плата для Intel 13-го покоління з розширеними можливостями розгону.",
+        "Price": 399.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 9,
+        "Color": "Black"
+      },
+      {
+        "Name": "MSI MPG B650 Tomahawk",
+        "Description": "Надійна плата для платформи AMD AM5 з хорошим набором функцій.",
+        "Price": 229.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 0,
+        "Color": "Black"
+      },
+      {
+        "Name": "Gigabyte X670 Aorus Elite",
+        "Description": "Плата для Ryzen з підтримкою PCIe 5.0 та швидких інтерфейсів.",
+        "Price": 279.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 8,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASRock B660M Pro RS",
+        "Description": "Компактна micro-ATX плата для бюджетних збірок на Intel.",
+        "Price": 119.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 14,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASUS TUF Gaming B550-PLUS",
+        "Description": "Збалансована плата для Ryzen з вбудованим охолодженням VRM.",
+        "Price": 159.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 13,
+        "Color": "Black"
+      },
+      {
+        "Name": "MSI MAG Z690 Tomahawk",
+        "Description": "Плата для Intel з хорошою якістю збірки і портами.",
+        "Price": 249.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 7,
+        "Color": "Gray"
+      },
+      {
+        "Name": "Gigabyte B450 Aorus M",
+        "Description": "Бюджетна плата для старіших поколінь Ryzen.",
+        "Price": 89.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 18,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASUS Prime Z690-P",
+        "Description": "Стабільна плата для робочих та ігрових збірок.",
+        "Price": 199.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 11,
+        "Color": "White"
+      },
+      {
+        "Name": "MSI MEG X570 GODLIKE",
+        "Description": "Преміум плата для ентузіастів з топовими можливостями.",
+        "Price": 899.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 2,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASRock X299 Taichi",
+        "Description": "Плата для високопродуктивних платформ під великий кількість ліній PCIe.",
+        "Price": 329.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 4,
+        "Color": "Black"
+      },
+      {
+        "Name": "Gigabyte Z590 Aorus Master",
+        "Description": "Плата з фокусом на розгін та стабільність для Intel.",
+        "Price": 319.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 6,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASUS ROG Maximus Z790 Hero",
+        "Description": "Преміум рішення для ентузіастів та розгінщиків.",
+        "Price": 599.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 3,
+        "Color": "Black"
+      },
+      {
+        "Name": "MSI B550-A Pro",
+        "Description": "Стабільна плата для бюджетних та середніх збірок на AMD.",
+        "Price": 129.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 15,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASRock B660 Steel Legend",
+        "Description": "Хороший набір портів та надійна конструкція для Intel.",
+        "Price": 139.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 12,
+        "Color": "Gray"
+      },
+      {
+        "Name": "Gigabyte TRX40 Aorus Master",
+        "Description": "Плата для Threadripper з великою кількістю ліній та портів.",
+        "Price": 749.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 2,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASUS Prime B660M-A",
+        "Description": "Практична micro-ATX плата з базовими функціями.",
+        "Price": 109.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 16,
+        "Color": "White"
+      },
+      {
+        "Name": "MSI X670 Pro",
+        "Description": "Плата для нових Ryzen із сучасними інтерфейсами.",
+        "Price": 279.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 9,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASRock B560 Steel Legend",
+        "Description": "Надійна плата для 11-го/12-го покоління Intel.",
+        "Price": 119.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 14,
+        "Color": "Black"
+      },
+      {
+        "Name": "Gigabyte H610M S2H",
+        "Description": "Доступна материнська плата для бюджетних збірок Intel.",
+        "Price": 69.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 20,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASUS ROG Crosshair X670E Hero",
+        "Description": "Плата для ентузіастів AMD з усіма сучасними функціями.",
+        "Price": 499.99,
+        "Image": "06materinskykarty.jpg",
+        "Amount": 4,
+        "Color": "Black"
+      }
+    ]
+  },
+  {
+    "Name": "Оперативна пам’ять",
+    "Products": [
+      {
+        "Name": "Corsair Vengeance LPX 16GB (2x8) DDR4-3200",
+        "Description": "Надійна DDR4 пам'ять для геймерів і робочих станцій.",
+        "Price": 74.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 20,
+        "Color": "Black"
+      },
+      {
+        "Name": "G.SKILL Trident Z5 RGB 32GB (2x16) DDR5-6000",
+        "Description": "Високопродуктивна DDR5 пам'ять з RGB підсвічуванням.",
+        "Price": 279.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 0,
+        "Color": "Black"
+      },
+      {
+        "Name": "Kingston FURY Beast 16GB DDR4-3200",
+        "Description": "Оптимальне рішення для ігрових та домашніх ПК.",
+        "Price": 69.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 18,
+        "Color": "Black"
+      },
+      {
+        "Name": "Crucial Ballistix 32GB (2x16) DDR4-3600",
+        "Description": "Пам'ять з гарним розгінним потенціалом та стабільністю.",
+        "Price": 149.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 9,
+        "Color": "White"
+      },
+      {
+        "Name": "Corsair Dominator Platinum RGB 32GB DDR5",
+        "Description": "Преміум DDR5 модулі з високими частотами та RGB.",
+        "Price": 459.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 4,
+        "Color": "Black"
+      },
+      {
+        "Name": "Patriot Viper Steel 16GB DDR4-3200",
+        "Description": "Надійні модулі з хорошим співвідношенням ціни та якості.",
+        "Price": 64.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 15,
+        "Color": "Gunmetal"
+      },
+      {
+        "Name": "TEAMGROUP T-Force Delta RGB 16GB DDR4",
+        "Description": "Пам'ять з ефектним RGB та стабільною роботою.",
+        "Price": 59.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 17,
+        "Color": "Black"
+      },
+      {
+        "Name": "Samsung OEM DDR4 8GB 2666MHz",
+        "Description": "ОЕМ модули Samsung — надійність та сумісність.",
+        "Price": 34.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 20,
+        "Color": "Green PCB"
+      },
+      {
+        "Name": "G.SKILL Ripjaws V 16GB DDR4-3600",
+        "Description": "Популярна серія з фокусом на ігрову продуктивність.",
+        "Price": 89.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 13,
+        "Color": "Black"
+      },
+      {
+        "Name": "Kingston FURY Renegade 32GB DDR5-5200",
+        "Description": "DDR5 модулі з низькою затримкою та високою частотою.",
+        "Price": 239.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 7,
+        "Color": "Black"
+      },
+      {
+        "Name": "Crucial 16GB DDR4-3200",
+        "Description": "Надійна та доступна оперативна пам'ять для щоденних задач.",
+        "Price": 59.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 19,
+        "Color": "Green PCB"
+      },
+      {
+        "Name": "TEAMGROUP T-Force Xtreem ARGB 16GB DDR4-3600",
+        "Description": "Пам'ять з ARGB та високою продуктивністю для геймерів.",
+        "Price": 99.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 10,
+        "Color": "Black"
+      },
+      {
+        "Name": "Corsair Vengeance RGB Pro 32GB DDR4",
+        "Description": "Відомі модулі з RGB та стабільною роботою під навантаженням.",
+        "Price": 179.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 8,
+        "Color": "Black"
+      },
+      {
+        "Name": "ADATA XPG Spectrix D60G 16GB DDR4",
+        "Description": "Яскраві RGB модули з хорошим тепловідведенням.",
+        "Price": 89.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 14,
+        "Color": "White"
+      },
+      {
+        "Name": "Patriot Viper Steel RGB 32GB DDR4",
+        "Description": "Великий комплект пам'яті для багатозадачності та ігор.",
+        "Price": 169.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 6,
+        "Color": "Black"
+      },
+      {
+        "Name": "Kingston ValueRAM 8GB DDR4-2400",
+        "Description": "Економічні модулі для апгрейду старих систем.",
+        "Price": 29.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 20,
+        "Color": "Green PCB"
+      },
+      {
+        "Name": "G.SKILL Trident Z Neo 32GB DDR4",
+        "Description": "Оптимізовані для платформ AMD Ryzen.",
+        "Price": 159.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 7,
+        "Color": "Black"
+      },
+      {
+        "Name": "Corsair Vengeance RGB SL 16GB DDR4",
+        "Description": "Стильні модули з RGB та компактним радіатором.",
+        "Price": 84.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 12,
+        "Color": "White"
+      },
+      {
+        "Name": "Patriot Signature 16GB DDR4-3200",
+        "Description": "Доступний набір оперативної пам'яті для щоденних задач.",
+        "Price": 54.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 15,
+        "Color": "Green PCB"
+      },
+      {
+        "Name": "TEAMGROUP T-Force Delta RGB DDR4 32GB",
+        "Description": "Пам'ять з ефектним ARGB освітленням для геймерського ПК.",
+        "Price": 149.99,
+        "Image": "07operatyvnapamiat.jpg",
+        "Amount": 11,
+        "Color": "Black"
+      }
+    ]
+  },
+  {
+    "Name": "SSD накопичувачі",
+    "Products": [
+      {
+        "Name": "Samsung 970 EVO Plus 1TB (NVMe)",
+        "Description": "Швидкий NVMe SSD з відмінним співвідношенням продуктивності та ціни.",
+        "Price": 129.99,
+        "Image": "08ssd.jpg",
+        "Amount": 20,
+        "Color": "Black"
+      },
+      {
+        "Name": "WD Black SN850 1TB (NVMe)",
+        "Description": "Високошвидкісний NVMe для ігрових систем та творчої роботи.",
+        "Price": 149.99,
+        "Image": "08ssd.jpg",
+        "Amount": 0,
+        "Color": "Black"
+      },
+      {
+        "Name": "Crucial P5 Plus 1TB (NVMe)",
+        "Description": "Надійний NVMe SSD для апгрейду ноутбуків і ПК.",
+        "Price": 119.99,
+        "Image": "08ssd.jpg",
+        "Amount": 18,
+        "Color": "Black"
+      },
+      {
+        "Name": "Samsung 860 EVO 1TB (SATA)",
+        "Description": "SATA SSD з перевіреною надійністю і стабільною швидкістю.",
+        "Price": 89.99,
+        "Image": "08ssd.jpg",
+        "Amount": 14,
+        "Color": "Black"
+      },
+      {
+        "Name": "Kingston KC3000 1TB (NVMe)",
+        "Description": "NVMe високої продуктивності для вимогливих задач.",
+        "Price": 139.99,
+        "Image": "08ssd.jpg",
+        "Amount": 12,
+        "Color": "Black"
+      },
+      {
+        "Name": "Seagate FireCuda 530 1TB (NVMe)",
+        "Description": "Преміум NVMe SSD з високою довговічністю та швидкостями.",
+        "Price": 179.99,
+        "Image": "08ssd.jpg",
+        "Amount": 8,
+        "Color": "Black"
+      },
+      {
+        "Name": "Western Digital Blue SN570 1TB",
+        "Description": "Доступний NVMe SSD для щоденних завдань та апгрейду.",
+        "Price": 79.99,
+        "Image": "08ssd.jpg",
+        "Amount": 19,
+        "Color": "Black"
+      },
+      {
+        "Name": "Sabrent Rocket Q 2TB (NVMe QLC)",
+        "Description": "Великий об'єм за помірну ціну для зберігання даних.",
+        "Price": 199.99,
+        "Image": "08ssd.jpg",
+        "Amount": 7,
+        "Color": "Black"
+      },
+      {
+        "Name": "ADATA XPG SX8200 Pro 1TB",
+        "Description": "Популярний NVMe SSD з хорошою продуктивністю за ціну.",
+        "Price": 99.99,
+        "Image": "08ssd.jpg",
+        "Amount": 15,
+        "Color": "Black"
+      },
+      {
+        "Name": "Crucial MX500 1TB (SATA)",
+        "Description": "Надійний SATA SSD з відмінною стійкістю і швидкістю читання/запису.",
+        "Price": 84.99,
+        "Image": "08ssd.jpg",
+        "Amount": 17,
+        "Color": "Black"
+      },
+      {
+        "Name": "Samsung 980 Pro 1TB (NVMe)",
+        "Description": "NVMe високого класу для рендерингу та ігор.",
+        "Price": 159.99,
+        "Image": "08ssd.jpg",
+        "Amount": 11,
+        "Color": "Black"
+      },
+      {
+        "Name": "Intel 670p 1TB NVMe",
+        "Description": "Оптимальне рішення для зберігання великих масивів даних.",
+        "Price": 109.99,
+        "Image": "08ssd.jpg",
+        "Amount": 13,
+        "Color": "Black"
+      },
+      {
+        "Name": "Kingston A2000 1TB NVMe",
+        "Description": "Доступний NVMe SSD для апгрейду ноутбуків та ПК.",
+        "Price": 89.99,
+        "Image": "08ssd.jpg",
+        "Amount": 16,
+        "Color": "Black"
+      },
+      {
+        "Name": "Seagate Barracuda 2TB HDD (Hybrid)",
+        "Description": "Гібридний диск для великого об'єму з прискоренням через кеш.",
+        "Price": 69.99,
+        "Image": "08ssd.jpg",
+        "Amount": 20,
+        "Color": "Black"
+      },
+      {
+        "Name": "SAMSUNG 870 QVO 1TB (SATA QLC)",
+        "Description": "Доступний великий об'єм з використанням QLC-технології.",
+        "Price": 79.99,
+        "Image": "08ssd.jpg",
+        "Amount": 12,
+        "Color": "Black"
+      },
+      {
+        "Name": "Western Digital Black SN770 1TB",
+        "Description": "Швидкий NVMe для ігор з хорошим тепловидаленням.",
+        "Price": 119.99,
+        "Image": "08ssd.jpg",
+        "Amount": 9,
+        "Color": "Black"
+      },
+      {
+        "Name": "Crucial P3 2TB NVMe",
+        "Description": "Великий NVMe за доступну ціну для зберігання ігор та файлів.",
+        "Price": 129.99,
+        "Image": "08ssd.jpg",
+        "Amount": 10,
+        "Color": "Black"
+      },
+      {
+        "Name": "Sabrent Rocket 4 Plus 1TB",
+        "Description": "Один з найшвидших NVMe накопичувачів для професійних задач.",
+        "Price": 229.99,
+        "Image": "08ssd.jpg",
+        "Amount": 6,
+        "Color": "Black"
+      },
+      {
+        "Name": "Kingston NV1 500GB NVMe",
+        "Description": "Бюджетний NVMe SSD для швидкого апгрейду старих систем.",
+        "Price": 44.99,
+        "Image": "08ssd.jpg",
+        "Amount": 18,
+        "Color": "Black"
+      },
+      {
+        "Name": "Western Digital Green 240GB SSD (SATA)",
+        "Description": "Економічний SATA SSD для ОС та базових програм.",
+        "Price": 34.99,
+        "Image": "08ssd.jpg",
+        "Amount": 20,
+        "Color": "Green"
+      }
+    ]
+  },
+  {
+    "Name": "Периферія",
+    "Products": [
+      {
+        "Name": "Logitech MX Master 3",
+        "Description": "Професійна бездротова миша з ергономікою для тривалих робочих сесій.",
+        "Price": 99.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 20,
+        "Color": "Graphite"
+      },
+      {
+        "Name": "Razer DeathAdder V2",
+        "Description": "Популярна ігрова миша з точним сенсором і комфортною формою.",
+        "Price": 59.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 0,
+        "Color": "Black"
+      },
+      {
+        "Name": "Corsair K70 RGB MK.2",
+        "Description": "Механічна клавіатура з RGB підсвічуванням та надійними перемикачами.",
+        "Price": 159.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 12,
+        "Color": "Black"
+      },
+      {
+        "Name": "SteelSeries Arctis 7",
+        "Description": "Бездротова ігрова гарнітура з комфортною посадкою та чистим звуком.",
+        "Price": 149.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 10,
+        "Color": "Black"
+      },
+      {
+        "Name": "Logitech G Pro X Keyboard",
+        "Description": "Про-клавіатура для кіберспортивних геймерів з модульними перемикачами.",
+        "Price": 129.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 11,
+        "Color": "Black"
+      },
+      {
+        "Name": "Elgato Stream Deck MK.2",
+        "Description": "Контролер для стримерів з програмованими макросами та кнопками.",
+        "Price": 149.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 9,
+        "Color": "Black"
+      },
+      {
+        "Name": "Logitech C920 HD Pro Webcam",
+        "Description": "Надійна вебкамера для відеодзвінків та стрімінгу в 1080p.",
+        "Price": 69.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 17,
+        "Color": "Black"
+      },
+      {
+        "Name": "Razer BlackWidow V3 Pro",
+        "Description": "Бездротова механічна клавіатура з розширеними функціями для геймерів.",
+        "Price": 199.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 6,
+        "Color": "Black"
+      },
+      {
+        "Name": "Apple Magic Keyboard",
+        "Description": "Компактна клавіатура Apple з чудовою збіркою та сумісністю.",
+        "Price": 99.0,
+        "Image": "09peryfyria.jpg",
+        "Amount": 13,
+        "Color": "White"
+      },
+      {
+        "Name": "Microsoft Sculpt Ergonomic Keyboard",
+        "Description": "Ергономічна клавіатура для зниження навантаження на зап’ястя.",
+        "Price": 129.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 8,
+        "Color": "Black"
+      },
+      {
+        "Name": "HyperX Alloy Origins",
+        "Description": "Надійна механічна клавіатура з алюмінієвою рамкою.",
+        "Price": 119.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 15,
+        "Color": "Black"
+      },
+      {
+        "Name": "Logitech G915 TKL",
+        "Description": "Тонка бездротова механічна клавіатура преміум класу.",
+        "Price": 229.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 7,
+        "Color": "Black"
+      },
+      {
+        "Name": "SteelSeries QcK Mousepad",
+        "Description": "Популярний тканинний килимок для миші з хорошою точністю.",
+        "Price": 19.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 20,
+        "Color": "Black"
+      },
+      {
+        "Name": "Logitech G432 7.1",
+        "Description": "Доступна гарнітура з 7.1 симульованим звуком для ігор.",
+        "Price": 59.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 16,
+        "Color": "Black"
+      },
+      {
+        "Name": "BenQ ZOWIE XL2546K (eSports monitor accessory)",
+        "Description": "Аксесуар/монітор для кіберспорту з високою частотою оновлення.",
+        "Price": 499.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 4,
+        "Color": "Black"
+      },
+      {
+        "Name": "Razer Huntsman Elite",
+        "Description": "Механічна клавіатура з оптико-механічними перемикачами та RGB.",
+        "Price": 189.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 6,
+        "Color": "Black"
+      },
+      {
+        "Name": "Logitech G502 HERO",
+        "Description": "Провідна ігрова миша з високотомним сенсором та кількома регульованими вагами.",
+        "Price": 49.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 19,
+        "Color": "Black"
+      },
+      {
+        "Name": "Blue Yeti USB Microphone",
+        "Description": "Популярний USB-мікрофон для стрімінгу та запису подкастів.",
+        "Price": 129.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 10,
+        "Color": "Black"
+      },
+      {
+        "Name": "Elgato Wave:3",
+        "Description": "Студійний USB мікрофон зі вбудованим софтом контролю.",
+        "Price": 149.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 9,
+        "Color": "Black"
+      },
+      {
+        "Name": "Logitech Brio 4K",
+        "Description": "Вебкамера високої якості для професійних відеоконференцій.",
+        "Price": 199.99,
+        "Image": "09peryfyria.jpg",
+        "Amount": 5,
+        "Color": "Black"
+      }
+    ]
+  },
+  {
+    "Name": "Мережеве обладнання",
+    "Products": [
+      {
+        "Name": "Ubiquiti UniFi Dream Machine Pro",
+        "Description": "Комплексне мережеве рішення: роутер, контролер та безпека в одному корпусі.",
+        "Price": 349.99,
+        "Image": "10meregeve.png",
+        "Amount": 7,
+        "Color": "Black"
+      },
+      {
+        "Name": "Netgear Nighthawk RAX200 (WiFi 6)",
+        "Description": "Потужний домашній роутер з підтримкою WiFi 6 та великою пропускною здатністю.",
+        "Price": 399.99,
+        "Image": "10meregeve.png",
+        "Amount": 0,
+        "Color": "Black"
+      },
+      {
+        "Name": "TP-Link Archer AX6000",
+        "Description": "WiFi 6 роутер з хорошим покриттям і безліччю портів.",
+        "Price": 279.99,
+        "Image": "10meregeve.png",
+        "Amount": 12,
+        "Color": "Black"
+      },
+      {
+        "Name": "ASUS RT-AX88U",
+        "Description": "Потужний роутер для геймерів і домашніх мереж з високою стабільністю.",
+        "Price": 299.99,
+        "Image": "10meregeve.png",
+        "Amount": 8,
+        "Color": "Black"
+      },
+      {
+        "Name": "MikroTik hEX RB750Gr3",
+        "Description": "Компактний проводовий роутер/маршрутизатор для малих мереж та офісів.",
+        "Price": 59.99,
+        "Image": "10meregeve.png",
+        "Amount": 20,
+        "Color": "White"
+      },
+      {
+        "Name": "Cisco Catalyst 2960-L (Enterprise switch)",
+        "Description": "Корпоративний мережевий комутатор з розширеними можливостями управління.",
+        "Price": 899.99,
+        "Image": "10meregeve.png",
+        "Amount": 3,
+        "Color": "Gray"
+      },
+      {
+        "Name": "TP-Link TL-SG108 (8-port Gigabit switch)",
+        "Description": "Простий 8-портовий гігабітний комутатор для домашніх та малих офісів.",
+        "Price": 24.99,
+        "Image": "10meregeve.png",
+        "Amount": 25,
+        "Color": "Black"
+      },
+      {
+        "Name": "Netgear Orbi RBK852 (Mesh WiFi 6)",
+        "Description": "Mesh-система для великого будинку з стабільним покриттям та високою швидкістю.",
+        "Price": 999.99,
+        "Image": "10meregeve.png",
+        "Amount": 4,
+        "Color": "White"
+      },
+      {
+        "Name": "Ubiquiti EdgeRouter ER-4",
+        "Description": "Потужний маршрутизатор з професійними можливостями конфігурації.",
+        "Price": 199.99,
+        "Image": "10meregeve.png",
+        "Amount": 6,
+        "Color": "Black"
+      },
+      {
+        "Name": "Synology RT2600ac",
+        "Description": "Роутер із хорошим набором функцій для мережевого зберігання та VPN.",
+        "Price": 199.99,
+        "Image": "10meregeve.png",
+        "Amount": 7,
+        "Color": "Black"
+      },
+      {
+        "Name": "TP-Link Archer AX20",
+        "Description": "Доступний WiFi 6 роутер для домашнього використання.",
+        "Price": 79.99,
+        "Image": "10meregeve.png",
+        "Amount": 18,
+        "Color": "White"
+      },
+      {
+        "Name": "Cisco Meraki Go GR10",
+        "Description": "Хмарний маршрутизатор/гейтвей для малого бізнесу з простим управлінням.",
+        "Price": 199.99,
+        "Image": "10meregeve.png",
+        "Amount": 5,
+        "Color": "White"
+      },
+      {
+        "Name": "MikroTik CRS326-24G-2S+RM",
+        "Description": "Комутатор з SFP+ портами для швидких корпоративних зв'язків.",
+        "Price": 399.99,
+        "Image": "10meregeve.png",
+        "Amount": 6,
+        "Color": "Black"
+      },
+      {
+        "Name": "Netgear GS308 (Unmanaged switch)",
+        "Description": "Простий 8-портовий unmanaged гігабітний комутатор.",
+        "Price": 29.99,
+        "Image": "10meregeve.png",
+        "Amount": 22,
+        "Color": "Black"
+      },
+      {
+        "Name": "Ubiquiti UniFi 6 Long-Range Access Point",
+        "Description": "Точка доступу WiFi 6 для великих площ та стабільного сигналу.",
+        "Price": 179.99,
+        "Image": "10meregeve.png",
+        "Amount": 10,
+        "Color": "White"
+      },
+      {
+        "Name": "TP-Link Deco M5 (Mesh kit)",
+        "Description": "Mesh-пакет для покриття будинку з простим налаштуванням.",
+        "Price": 149.99,
+        "Image": "10meregeve.png",
+        "Amount": 13,
+        "Color": "White"
+      },
+      {
+        "Name": "ASUS Blue Cave AC2600",
+        "Description": "Стильний роутер з хорошими функціональними можливостями та дизайном.",
+        "Price": 159.99,
+        "Image": "10meregeve.png",
+        "Amount": 9,
+        "Color": "White"
+      },
+      {
+        "Name": "MikroTik RB4011",
+        "Description": "Потужний роутер для офісних задач та складних мережевих конфігурацій.",
+        "Price": 199.99,
+        "Image": "10meregeve.png",
+        "Amount": 11,
+        "Color": "Black"
+      },
+      {
+        "Name": "Linksys Velop AX4200 Mesh",
+        "Description": "Mesh-система з WiFi 6 для стабільного покриття великої оселі.",
+        "Price": 349.99,
+        "Image": "10meregeve.png",
+        "Amount": 6,
+        "Color": "White"
+      },
+      {
+        "Name": "Netis WF2780 (AC1200) Router",
+        "Description": "Бюджетний двохдіапазонний роутер для домашнього використання.",
+        "Price": 39.99,
+        "Image": "10meregeve.png",
+        "Amount": 20,
+        "Color": "Black"
+      }
+    ]
+  }
+]

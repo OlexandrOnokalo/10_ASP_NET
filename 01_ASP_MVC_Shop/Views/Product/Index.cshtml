@@ -1,18 +1,18 @@
-﻿@using _01_ASP_MVC_Shop.Models
-@model IEnumerable<ProductModel>
+﻿@using _01_ASP_MVC_Shop.ViewModels
+@model HomeVM
 
 <div class="text-center">
     <table class="table table-striped">
         <thead class="table-dark">
             <tr>
                 <th>Id</th>
-                <th>Name</th>
-                <th>Brand</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th>Category</th>
-                <th>Created</th>
-                <th>Image</th>
+                <th>Назва</th>
+                <th>Колір</th>
+                <th>Кількість</th>
+                <th>Ціна</th>
+                <th>Категорія</th>
+                <th>Створено</th>
+                <th>Зображення</th>
                 <th>
                     <a asp-action="Create" asp-controller="Product" style="color: white">
                         <i class="bi bi-plus-circle-dotted"></i>
@@ -22,7 +22,7 @@
 
         </thead>
         <tbody>
-            @foreach (var product in Model)
+            @foreach (var product in Model.Products)
             {
                 <tr>
                     <td>@product.Id</td>
@@ -30,10 +30,9 @@
                     <td>@product.Color</td>
                     <td>@product.Amount</td>
                     <td>@product.Price</td>
-                    <td>@product.Category!.Name</td>
+                    <td>@(product.Category?.Name ?? "-")</td>
                     <td>@product.CreatedDate.ToString("yyyy-MM-dd HH:mm")</td>
                     <td>
-                        @* ~  шлях до папки wwwroot *@
                         <img height="50" class="image-scale" src="~/images/@(product.Image ?? "default.jpg")" alt="@product.Name">
                     </td>
                     <td>
@@ -50,4 +49,4 @@
             }
         </tbody>
     </table>
-</div>
+</div></div>

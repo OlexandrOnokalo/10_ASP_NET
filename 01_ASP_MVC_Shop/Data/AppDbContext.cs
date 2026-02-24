@@ -1,13 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using _01_ASP_MVC_Shop.Models;
 
 namespace _01_ASP_MVC_Shop.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<UserModel>
     {
         public AppDbContext(DbContextOptions options)
             : base(options)
-        {
+        { 
         }
 
         public DbSet<CategoryModel> Categories { get; set; }
@@ -51,9 +52,6 @@ namespace _01_ASP_MVC_Shop.Data
                 .WithMany(c => c.Products)
                 .HasForeignKey(p => p.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
-
-            // Seed data
-            Seeder.Seed(builder);
 
             base.OnModelCreating(builder);
         }

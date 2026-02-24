@@ -38,7 +38,7 @@ namespace _01_ASP_MVC_Shop.Controllers
         public IActionResult Index(int? category)
         {
             List<CategoryModel> categories = _context.Categories.ToList();
-            IQueryable<ProductModel> products = _context.Products;
+            IQueryable<ProductModel> products = _context.Products.Include(p => p.Category);
 
             if (category != null && categories.Any(c => c.Id == category))
             {
@@ -47,7 +47,7 @@ namespace _01_ASP_MVC_Shop.Controllers
 
             var homeVm = new HomeVM
             {
-                Products = products,
+                Products = products.ToList(),
                 Categories = categories
             };
 
@@ -91,6 +91,7 @@ namespace _01_ASP_MVC_Shop.Controllers
             ProductModel model = new ProductModel
             {
                 Name = vm.Name ?? string.Empty,
+                Description = vm.Description,
                 Price = vm.Price,
                 Amount = vm.Amount,
                 Color = vm.Color,
@@ -162,6 +163,7 @@ namespace _01_ASP_MVC_Shop.Controllers
             {
                 Id = product.Id,
                 Name = product.Name,
+                Description = product.Description,
                 Color = product.Color,
                 Price = product.Price,
                 CurrentImage = product.Image,
@@ -190,6 +192,7 @@ namespace _01_ASP_MVC_Shop.Controllers
 
 
             product.Name = vm.Name ?? string.Empty;
+            product.Description = vm.Description;
             product.Color = vm.Color;
             product.Price = vm.Price;
             product.Amount = vm.Amount;
