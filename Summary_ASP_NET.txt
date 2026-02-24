@@ -8321,7 +8321,7 @@ appDbContext.cs
 
     public class AppDbContext : DbContext міняємо на 
 	
-	public class AppDbContext : IdentutyDbContext<UserModel> 
+    public class AppDbContext : IdentityDbContext<UserModel> 
 	//додаємо ще модель з додатковими полями
 
 
@@ -8329,7 +8329,7 @@ Programs.cs
 
 дописуємо
 // Add Identity
-builder.Services.AddIdentity<UserModel, IdentityRole>(options =>
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 {
     options.User.RequireUniqueEmail = true;
 
@@ -8343,7 +8343,7 @@ builder.Services.AddIdentity<UserModel, IdentityRole>(options =>
     .AddDefaultTokenProviders()
     .AddDefaultUI();
 
-
+і:
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -8353,11 +8353,27 @@ app.UseAuthorization();
 AspNetUsers вся інфа про користувачам
 решта ще роль, токени і тд
 
+
+
 Щоб додати в таблицю ще інформацію про користувача
 
-models\UserModel.cs
-?????????????????????????? успадковуємо ту таблицю
-і додаємо нові поля
+/Models/UserModel.cs
+
+
+
+
+using Microsoft.AspNetCore.Identity;
+
+namespace PD411_Shop.Models
+{
+    public class UserModel : IdentityUser //успадковуємо ту таблицю і додаємо нові поля
+    {
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? Image { get; set; }
+    }
+}
+
 
 також можем переробити якесь поле 
 
@@ -8366,9 +8382,14 @@ models\UserModel.cs
 щоб працювати з користувачами і ролями 
 ми додаємо нові класи 
 
-seeder треба повністю переробляти
 
 
+========================================================
+07_ASP_MVC_Session
+.....
+
+
+========================================================
 
 
 
